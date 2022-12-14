@@ -48,30 +48,56 @@ extension MoreVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = MoreDataService.getMoreItems()[indexPath.item].type
-        let vc: UIViewController
+
         switch type {
         case .home:
-             vc = SceneContainer.getHomeVc()
+            homeItemSelected()
         case .myProfile:
-            vc = SceneContainer.getHomeVc()
-            print("profilr")
+            myProfileItemSelected()
         case .termsAndConditions:
-             vc = SceneContainer.getTermsAndConditions()
-            print("terms")
+           termsItemSelected()
         case .logout:
-            vc = SceneContainer.getTermsAndConditions()
-//           self.navigationController?.pushViewController(vc, animated: true)
-            
-            print("\(PersistenceManager.getUserEmail())")
+            logoutItemSelected()
         case .none:
-            vc = SceneContainer.getTermsAndConditions()
-           self.navigationController?.pushViewController(vc, animated: true)
             print("none")
         }
-        if isContained(vc: vc) {
+    }
+}
+
+// MARK: - Navigation
+extension MoreVC {
+    
+    func homeItemSelected(){
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is HomeVC {
             self.navigationController?.popToViewController(vc, animated: true)
-        } else {
-            self.navigationController?.pushViewController(vc, animated: true)
+            return
         }
+        let vc = SceneContainer.getHomeVc()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func myProfileItemSelected(){
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is MyProfileVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getMyProfile()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func termsItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is TermsAndConditionsVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getTermsAndConditions()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func logoutItemSelected() {
+        PersistenceManager.clearDefalts()
+        let vc = SceneContainer.embedVCInNavController(SceneContainer.getLoginVC())
+        AppManager.shared.setRootView(viewController: vc)
     }
 }

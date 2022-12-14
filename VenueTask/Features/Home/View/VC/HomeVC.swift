@@ -32,7 +32,6 @@ class HomeVC: BaseVC {
     weak var viewModel: HomeViewModelProtocol!
     var tabsTitles = ["ListView", "GoogleMap"]
     private var infoWindow = CustomMapMarkerWindow(frame: .zero)
-    private var overlayView = UIView()
     
     var viewtype: ViewType = .listView {
         didSet {
@@ -82,17 +81,12 @@ class HomeVC: BaseVC {
         self.present(menu, animated: true)
     }
     
-    
 }
 // MARK: - Initial
 extension HomeVC {
     private func setupInitialUI() {
         venuesTableView.isHiddenIfNeeded = false
         mapView.isHiddenIfNeeded = true
-        // overlay creation
-        overlayView.backgroundColor = .black
-        overlayView.alpha = 0.47
-        overlayView.translatesAutoresizingMaskIntoConstraints = false
         setUpTableView()
     }
     private func setUpTableView() {

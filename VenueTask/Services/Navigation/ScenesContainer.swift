@@ -73,4 +73,8 @@ final class SceneContainer {
         let vc = SignUpVC(viewModel: SignUpViewModel())
         return vc
     }
+    class func getMyProfile() -> MyProfileVC {
+        let vc = MyProfileVC(viewModel: MyProfileViewModel())
+        return vc
+    }
 }

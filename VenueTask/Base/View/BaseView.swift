@@ -23,6 +23,7 @@ class BaseVC: UIViewController {
     
     private var loadingView: MBProgressHUD!
     private var baseViewModel: BaseViewModelProtocol!
+    var overlayView = UIView()
     
     init(baseViewModel: BaseViewModelProtocol) {
         super.init(nibName: nil, bundle: nil)
@@ -37,6 +38,9 @@ class BaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.setupNavBar()
+        overlayView.backgroundColor = .black
+        overlayView.alpha = 0.47
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
         dismissKeyBoard()
         self.setupBindings()
     }
@@ -63,6 +67,12 @@ class BaseVC: UIViewController {
             self.showMessage(message: message, type: type)
         }
         
+    }
+    func setUpNavBar() {
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
     }
     
 }

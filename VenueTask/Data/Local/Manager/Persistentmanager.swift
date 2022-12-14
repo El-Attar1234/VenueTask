@@ -47,7 +47,7 @@ class PersistenceManager {
     static func isAuthenticated() -> Bool {
         return  UserDefaults.standard.bool(forKey: DefaulKeys.authentication.rawValue)
     }
-    static func cleardefalts() {
+    static func clearDefalts() {
         DefaulKeys.allCases.forEach { UserDefaults.standard.removeObject(forKey: $0.rawValue) }
     }
 }
