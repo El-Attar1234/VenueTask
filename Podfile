@@ -6,7 +6,8 @@ target 'VenueTask' do
   use_frameworks!
 
   # Pods for VenueTask
- pod 'GooglePlaces'
+  pod 'GoogleMaps', '7.1.0'
+ # pod 'GooglePlaces'
 pod 'Moya'
 pod 'IQKeyboardManagerSwift', '6.3.0'
 pod 'SwiftMessages'

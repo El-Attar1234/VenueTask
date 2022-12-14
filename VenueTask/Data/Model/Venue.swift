@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - ServerResponse
 struct ServerResponse<T: Codable>: Codable {
     let meta: Meta?
