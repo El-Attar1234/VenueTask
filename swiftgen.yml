@@ -1,0 +1,21 @@
+ # common path for inputs and outputs of resources
+ input_dir: VenueTask/Resources/
+ output_dir: VenueTask/Resources/
+ 
+
+# Assets(Images and colors)
+ xcassets:
+   inputs:
+     - Assets/Images.xcassets
+     - Assets/Colors.xcassets
+   outputs:
+     - templateName: swift5
+       output: Assets/XCAssets+Generated.swift
+
+# Fonts
+ fonts:
+   inputs: Fonts/
+
+   outputs:
+     - templateName: swift5
+       output: Fonts/Fonts.swift

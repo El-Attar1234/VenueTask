@@ -7,25 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FA5B5E44FDD92CD6D40C7FB /* Pods_VenueTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */; };
+		84579804294953D50058E700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84579803294953D50058E700 /* Colors.xcassets */; };
+		84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84579807294953EF0058E700 /* Cairo-Bold.ttf */; };
+		8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8457980A294954220058E700 /* Cairo-SemiBold.ttf */; };
+		8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457980C294954660058E700 /* XCAssets+Generated.swift */; };
+		8457980F294954740058E700 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457980E294954740058E700 /* Fonts.swift */; };
 		84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF0E294950D20017E70B /* AppDelegate.swift */; };
 		84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF10294950D20017E70B /* SceneDelegate.swift */; };
 		84FAEF13294950D20017E70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF12294950D20017E70B /* ViewController.swift */; };
 		84FAEF16294950D20017E70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF14294950D20017E70B /* Main.storyboard */; };
 		84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */; };
-		84FAEF1B294950D40017E70B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF1A294950D40017E70B /* Assets.xcassets */; };
+		84FAEF1B294950D40017E70B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF1A294950D40017E70B /* Images.xcassets */; };
 		84FAEF1E294950D40017E70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenueTask.release.xcconfig"; path = "Target Support Files/Pods-VenueTask/Pods-VenueTask.release.xcconfig"; sourceTree = "<group>"; };
+		25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenueTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84579803294953D50058E700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		84579807294953EF0058E700 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		8457980A294954220058E700 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		8457980C294954660058E700 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		8457980E294954740058E700 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		84FAEF0B294950D20017E70B /* VenueTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FAEF0E294950D20017E70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FAEF10294950D20017E70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84FAEF12294950D20017E70B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84FAEF15294950D20017E70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FAEF18294950D20017E70B /* VenueTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueTask.xcdatamodel; sourceTree = "<group>"; };
-		84FAEF1A294950D40017E70B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FAEF1A294950D40017E70B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84FAEF1D294950D40017E70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84FAEF1F294950D40017E70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7A67A91F9580A1322A8C18F /* Pods-VenueTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenueTask.debug.xcconfig"; path = "Target Support Files/Pods-VenueTask/Pods-VenueTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +47,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA5B5E44FDD92CD6D40C7FB /* Pods_VenueTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		506A693750B2F073D100971A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7A67A91F9580A1322A8C18F /* Pods-VenueTask.debug.xcconfig */,
+				1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84579801294953960058E700 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84579805294953DF0058E700 /* Fonts */,
+				84579802294953BC0058E700 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84579802294953BC0058E700 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				84FAEF1A294950D40017E70B /* Images.xcassets */,
+				84579803294953D50058E700 /* Colors.xcassets */,
+				8457980C294954660058E700 /* XCAssets+Generated.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		84579805294953DF0058E700 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84579807294953EF0058E700 /* Cairo-Bold.ttf */,
+				8457980A294954220058E700 /* Cairo-SemiBold.ttf */,
+				8457980E294954740058E700 /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		84FAEF02294950D20017E70B = {
 			isa = PBXGroup;
 			children = (
 				84FAEF0D294950D20017E70B /* VenueTask */,
 				84FAEF0C294950D20017E70B /* Products */,
+				506A693750B2F073D100971A /* Pods */,
+				E7FE31D19467EF0629D6B67B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +113,24 @@
 		84FAEF0D294950D20017E70B /* VenueTask */ = {
 			isa = PBXGroup;
 			children = (
+				84579801294953960058E700 /* Resources */,
 				84FAEF0E294950D20017E70B /* AppDelegate.swift */,
 				84FAEF10294950D20017E70B /* SceneDelegate.swift */,
 				84FAEF12294950D20017E70B /* ViewController.swift */,
 				84FAEF14294950D20017E70B /* Main.storyboard */,
-				84FAEF1A294950D40017E70B /* Assets.xcassets */,
 				84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */,
 				84FAEF1F294950D40017E70B /* Info.plist */,
 				84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */,
 			);
 			path = VenueTask;
+			sourceTree = "<group>";
+		};
+		E7FE31D19467EF0629D6B67B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +140,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FAEF22294950D40017E70B /* Build configuration list for PBXNativeTarget "VenueTask" */;
 			buildPhases = (
+				96764C914539CA777657FBA8 /* [CP] Check Pods Manifest.lock */,
 				84FAEF07294950D20017E70B /* Sources */,
 				84FAEF08294950D20017E70B /* Frameworks */,
 				84FAEF09294950D20017E70B /* Resources */,
+				F0D1793D015F405DE7B8E414 /* [CP] Embed Pods Frameworks */,
+				17B92CF84C87BBADB8532B80 /* [CP] Copy Pods Resources */,
+				845797FF2949532D0058E700 /* SwiftLint */,
+				84579800294953370058E700 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -129,21 +197,123 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FAEF1E294950D40017E70B /* LaunchScreen.storyboard in Resources */,
-				84FAEF1B294950D40017E70B /* Assets.xcassets in Resources */,
+				84579804294953D50058E700 /* Colors.xcassets in Resources */,
+				84FAEF1B294950D40017E70B /* Images.xcassets in Resources */,
+				84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */,
 				84FAEF16294950D20017E70B /* Main.storyboard in Resources */,
+				8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B92CF84C87BBADB8532B80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845797FF2949532D0058E700 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		84579800294953370058E700 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n\n";
+		};
+		96764C914539CA777657FBA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VenueTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D1793D015F405DE7B8E414 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VenueTask/Pods-VenueTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84FAEF07294950D20017E70B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */,
 				84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */,
 				84FAEF13294950D20017E70B /* ViewController.swift in Sources */,
 				84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */,
+				8457980F294954740058E700 /* Fonts.swift in Sources */,
 				84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +456,7 @@
 		};
 		84FAEF23294950D40017E70B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A67A91F9580A1322A8C18F /* Pods-VenueTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +485,7 @@
 		};
 		84FAEF24294950D40017E70B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
