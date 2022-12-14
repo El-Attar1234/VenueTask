@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  VenuesTask
+
+  Created by Ibtikar on 13/12/2022.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "VenuesTask needs to access your current location to provide the nearest venues to your location";
+"NSLocationAlwaysUsageDescription" = "GGGGG";
