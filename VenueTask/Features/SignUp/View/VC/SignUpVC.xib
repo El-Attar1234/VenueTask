@@ -147,7 +147,7 @@
                                                     <color key="textColor" name="header-black"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, Enter your Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-35-iXE">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please, Enter your Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-35-iXE">
                                                     <rect key="frame" x="0.0" y="26.666666666666686" width="330" height="55"/>
                                                     <color key="backgroundColor" name="ghost-white"/>
                                                     <constraints>
@@ -155,7 +155,7 @@
                                                     </constraints>
                                                     <color key="textColor" name="header-black"/>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
                                                             <real key="value" value="12"/>

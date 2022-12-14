@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FA5B5E44FDD92CD6D40C7FB /* Pods_VenueTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */; };
+		8451CFBA294A3BED0050AAEA /* ValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */; };
 		84579804294953D50058E700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84579803294953D50058E700 /* Colors.xcassets */; };
 		84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84579807294953EF0058E700 /* Cairo-Bold.ttf */; };
 		8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8457980A294954220058E700 /* Cairo-SemiBold.ttf */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenueTask.release.xcconfig"; path = "Target Support Files/Pods-VenueTask/Pods-VenueTask.release.xcconfig"; sourceTree = "<group>"; };
 		25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenueTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFactory.swift; sourceTree = "<group>"; };
 		84579803294953D50058E700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		84579807294953EF0058E700 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		8457980A294954220058E700 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 				1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8451CFB8294A3BCD0050AAEA /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 		84579801294953960058E700 /* Resources */ = {
@@ -310,6 +320,7 @@
 			children = (
 				848C1B9A294A382C00A296FD /* Reusable */,
 				8457982A294957230058E700 /* Navigation */,
+				8451CFB8294A3BCD0050AAEA /* Validation */,
 				8457982D294957230058E700 /* Extensions */,
 			);
 			path = Services;
@@ -887,6 +898,7 @@
 				84579865294957AB0058E700 /* Environment.swift in Sources */,
 				8457985D294957230058E700 /* Venue.swift in Sources */,
 				84579855294957230058E700 /* UItextfield+Extension.swift in Sources */,
+				8451CFBA294A3BED0050AAEA /* ValidationFactory.swift in Sources */,
 				848C1B8E294A2CF900A296FD /* LoginVC.swift in Sources */,
 				84579818294956630058E700 /* BaseviewModel.swift in Sources */,
 				8457981A294956830058E700 /* BaseView.swift in Sources */,
