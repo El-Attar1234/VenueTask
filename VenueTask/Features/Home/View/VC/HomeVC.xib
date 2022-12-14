@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="VenuesTask" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="VenueTask" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="lYw-4X-oCC" id="eQb-qA-Seb"/>
                 <outlet property="venuesTableView" destination="Yxo-Pr-Y8o" id="jOc-Ji-1Ee"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,13 +24,23 @@
                     <rect key="frame" x="10" y="67" width="370" height="723"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-4X-oCC" customClass="GMSMapView">
+                    <rect key="frame" x="10" y="590" width="370" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="U98-2x-jHJ"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="lYw-4X-oCC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="CJk-O0-iX4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yxo-Pr-Y8o" secondAttribute="trailing" constant="10" id="ECh-JT-yjh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lYw-4X-oCC" secondAttribute="trailing" constant="10" id="Trn-i6-YD0"/>
                 <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Uvy-xT-56Q"/>
                 <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Vtj-ls-AiF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lYw-4X-oCC" secondAttribute="bottom" constant="20" id="ZSi-aL-K3E"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yxo-Pr-Y8o" secondAttribute="bottom" constant="20" id="oSG-5H-dbG"/>
             </constraints>
             <point key="canvasLocation" x="12" y="21"/>

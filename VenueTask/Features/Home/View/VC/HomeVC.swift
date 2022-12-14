@@ -7,9 +7,11 @@
 
 import UIKit
 import CoreLocation
+import GoogleMaps
 
 class HomeVC: BaseVC {
-    
+   
+    @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var venuesTableView: UITableView!
     // MARK: - Private Variables
     private let cLocationManager = CLLocationManager()
@@ -48,6 +50,7 @@ class HomeVC: BaseVC {
         venuesTableView.register(cellType: VenueCell.self)
     }
     private func setUpLocationManager() {
+      //  mapView.delegate = self
         cLocationManager.delegate = self
         cLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationAuthStatus()
@@ -92,4 +95,23 @@ extension HomeVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         locationAuthStatus()
     }
+}
+
+extension HomeVC: GMSMapViewDelegate {
+    func goToLocation(){
+
+          let camera = GMSCameraPosition.camera(withLatitude: 30 , longitude: 31 , zoom: 8)
+          
+          mapView.camera = camera
+          
+      }
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+           
+           let position = CLLocationCoordinate2D(latitude: 30, longitude: 31)
+           
+           let marker = GMSMarker(position: position)
+           
+           marker.map = self.mapView
+       }
+    
 }
