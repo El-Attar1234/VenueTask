@@ -60,6 +60,8 @@
 		848C1B8F294A2CF900A296FD /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848C1B8D294A2CF900A296FD /* LoginVC.xib */; };
 		848C1B95294A2F8500A296FD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B93294A2F8500A296FD /* SignUpVC.swift */; };
 		848C1B96294A2F8500A296FD /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848C1B94294A2F8500A296FD /* SignUpVC.xib */; };
+		848C1B99294A381500A296FD /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B98294A381500A296FD /* UIButton+Extension.swift */; };
+		848C1B9C294A384C00A296FD /* MainCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B9B294A384C00A296FD /* MainCustomButton.swift */; };
 		84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF0E294950D20017E70B /* AppDelegate.swift */; };
 		84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF10294950D20017E70B /* SceneDelegate.swift */; };
 		84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */; };
@@ -122,6 +124,8 @@
 		848C1B8D294A2CF900A296FD /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		848C1B93294A2F8500A296FD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		848C1B94294A2F8500A296FD /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		848C1B98294A381500A296FD /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		848C1B9B294A384C00A296FD /* MainCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomButton.swift; sourceTree = "<group>"; };
 		84FAEF0B294950D20017E70B /* VenueTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FAEF0E294950D20017E70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FAEF10294950D20017E70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 		84579829294957230058E700 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				848C1B9A294A382C00A296FD /* Reusable */,
 				8457982A294957230058E700 /* Navigation */,
 				8457982D294957230058E700 /* Extensions */,
 			);
@@ -322,6 +327,7 @@
 		8457982D294957230058E700 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				848C1B97294A37FD00A296FD /* UIButton */,
 				848C1B77294A0F5400A296FD /* UINavigationBar */,
 				848C1B642949D99B00A296FD /* UICollectionView */,
 				8457982E294957230058E700 /* UIView */,
@@ -613,6 +619,22 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		848C1B97294A37FD00A296FD /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				848C1B98294A381500A296FD /* UIButton+Extension.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		848C1B9A294A382C00A296FD /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				848C1B9B294A384C00A296FD /* MainCustomButton.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		84FAEF02294950D20017E70B = {
 			isa = PBXGroup;
 			children = (
@@ -843,6 +865,7 @@
 			files = (
 				84579856294957230058E700 /* DataSource.swift in Sources */,
 				8457984D294957230058E700 /* HomeVC+Extension.swift in Sources */,
+				848C1B99294A381500A296FD /* UIButton+Extension.swift in Sources */,
 				84579854294957230058E700 /* UItableView+Extension.swift in Sources */,
 				8457985A294957230058E700 /* Networkerror.swift in Sources */,
 				8457984F294957230058E700 /* HomeVC.swift in Sources */,
@@ -869,6 +892,7 @@
 				8457981A294956830058E700 /* BaseView.swift in Sources */,
 				848C1B95294A2F8500A296FD /* SignUpVC.swift in Sources */,
 				8457985C294957230058E700 /* UserLocation.swift in Sources */,
+				848C1B9C294A384C00A296FD /* MainCustomButton.swift in Sources */,
 				84579858294957230058E700 /* HomeService.swift in Sources */,
 				848C1B622949D79900A296FD /* TabCell.swift in Sources */,
 				848C1B82294A14F700A296FD /* MoreDataService.swift in Sources */,
