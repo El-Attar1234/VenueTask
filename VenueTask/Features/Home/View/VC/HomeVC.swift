@@ -83,30 +83,6 @@ class HomeVC: BaseVC {
     }
     
     
-    
-    func setUpNavBar() {
-        print(navigationController)
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.navigationBar.backItem?.title = ""
-        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
-     //   self.navigationController?.navigationBar.transparentNavigationBar()
-        
-        let leftBarButtonItem = UIBarButtonItem(
-            image: Asset.Images.icMenu.image,
-            style: .plain,
-            target: self,
-            action: #selector(mainMenuTapped))
-        
-        self.navigationItem.leftBarButtonItem = leftBarButtonItem
-        self.navigationItem.rightBarButtonItem?.tintColor = .white
-        self.navigationItem.leftBarButtonItem?.tintColor = Asset.Colors.mainPurple.color
-    }
-    @objc
-    func mainMenuTapped() {
-        let menu = SceneContainer.openSideMenu()
-        menu.sideMenuDelegate = self
-        self.present(menu, animated: true)
-    }
 }
 // MARK: - Initial
 extension HomeVC {

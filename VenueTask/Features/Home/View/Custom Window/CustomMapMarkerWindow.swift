@@ -10,11 +10,9 @@ import UIKit
 @IBDesignable
 class CustomMapMarkerWindow: UIView {
     @IBOutlet weak var backgroundView: UIView!
-    
-    @IBOutlet weak var venueNameLabel: UILabel!
-    @IBOutlet weak var venueLocationLabel: UILabel!
-    
-    @IBOutlet weak var venueCategoryLabel: UILabel!
+    @IBOutlet private weak var venueNameLabel: UILabel!
+    @IBOutlet private weak var venueLocationLabel: UILabel!
+    @IBOutlet private weak var venueCategoryLabel: UILabel!
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -33,12 +31,11 @@ class CustomMapMarkerWindow: UIView {
         let nib = UINib(nibName: CustomMapMarkerWindow.className, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-    func setup(venue: Venue?){
+    func setup(venue: Venue?) {
         venueNameLabel.text = venue?.name
         let fullAddress = venue?.location?.address ?? "" + (venue?.location?.crossStreet ?? "")
         venueLocationLabel.text = fullAddress
         venueCategoryLabel.text = venue?.categories?[0].name
-        
         
     }
 }

@@ -30,7 +30,7 @@ final class SceneContainer {
         let viewController = getMoreVc()
         let menu = SideMenuNavigationController(rootViewController: viewController)
         menu.leftSide = true
-        //menu.sideMenuDelegate = self
+        // menu.sideMenuDelegate = self
        // let width = UIScreen.main.bounds.width - 70
      //   menu.menuWidth = (width - 70)
         
@@ -57,6 +57,10 @@ final class SceneContainer {
 
     class func getMoreVc() -> MoreVC {
         let vc = MoreVC()
+        return vc
+    }
+    class func getTermsAndConditions() -> TermsAndConditionsVC {
+        let vc = TermsAndConditionsVC()
         return vc
     }
 }

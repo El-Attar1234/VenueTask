@@ -24,6 +24,9 @@ class MoreVC: UIViewController {
         moreTableView.delegate = self
         moreTableView.register(cellType: MoreCell.self)
     }
+    func isContained<V: UIViewController>(vc: V) -> Bool {
+        self.navigationController?.viewControllers.contains(vc) ?? false
+    }
 
 }
 
@@ -43,5 +46,31 @@ extension MoreVC: UITableViewDataSource {
 
 extension MoreVC: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = MoreDataService.getMoreItems()[indexPath.item].type
+        let vc: UIViewController
+        switch type {
+        case .home:
+             vc = SceneContainer.getHomeVc()
+        case .myProfile:
+            vc = SceneContainer.getHomeVc()
+            print("profilr")
+        case .termsAndConditions:
+             vc = SceneContainer.getTermsAndConditions()
+            print("terms")
+        case .logout:
+            vc = SceneContainer.getTermsAndConditions()
+           self.navigationController?.pushViewController(vc, animated: true)
+            print("logout")
+        case .none:
+            vc = SceneContainer.getTermsAndConditions()
+           self.navigationController?.pushViewController(vc, animated: true)
+            print("none")
+        }
+        if isContained(vc: vc) {
+            self.navigationController?.popToViewController(vc, animated: true)
+        } else {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

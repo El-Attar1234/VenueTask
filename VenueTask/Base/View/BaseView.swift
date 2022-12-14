@@ -46,6 +46,7 @@ class BaseVC: UIViewController {
         view.addGestureRecognizer(tapGesture)
         tapGesture.cancelsTouchesInView = false
     }
+  
     private func setupBindings() {
         
         baseViewModel.showLoader = { [weak self]  in
