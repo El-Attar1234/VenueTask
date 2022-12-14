@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-SemiBold.ttf">
+            <string>Cairo-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TabCell" customModule="VenueTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="101" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="101" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-5Y-aKL">
+                        <rect key="frame" x="0.0" y="0.0" width="101" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ListView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-mO-AmK">
+                                <rect key="frame" x="29.000000000000004" y="0.0" width="43.333333333333343" height="57"/>
+                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="12"/>
+                                <color key="textColor" name="header-black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2M-Vy-CdT">
+                                <rect key="frame" x="19.000000000000004" y="67" width="63.333333333333343" height="3"/>
+                                <color key="backgroundColor" name="main-purple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="ExT-eO-C9E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aol-HD-hqy" userLabel="Gray Separtor View">
+                                <rect key="frame" x="0.0" y="68.333333333333329" width="101" height="0.3333333333333286"/>
+                                <color key="backgroundColor" name="header-black"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="ZxS-St-UHN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R2M-Vy-CdT" firstAttribute="leading" secondItem="dxz-mO-AmK" secondAttribute="leading" constant="-10" id="34o-JS-MzT"/>
+                            <constraint firstItem="Aol-HD-hqy" firstAttribute="leading" secondItem="eRQ-5Y-aKL" secondAttribute="leading" id="D9U-vt-5eW"/>
+                            <constraint firstItem="dxz-mO-AmK" firstAttribute="top" secondItem="eRQ-5Y-aKL" secondAttribute="top" id="G6J-2J-5Oq"/>
+                            <constraint firstAttribute="trailing" secondItem="Aol-HD-hqy" secondAttribute="trailing" id="W6N-j3-gsM"/>
+                            <constraint firstItem="dxz-mO-AmK" firstAttribute="centerX" secondItem="eRQ-5Y-aKL" secondAttribute="centerX" id="cib-1f-zAa"/>
+                            <constraint firstItem="R2M-Vy-CdT" firstAttribute="top" secondItem="dxz-mO-AmK" secondAttribute="bottom" constant="10" id="fLY-xh-Xzp"/>
+                            <constraint firstItem="R2M-Vy-CdT" firstAttribute="trailing" secondItem="dxz-mO-AmK" secondAttribute="trailing" constant="10" id="u7d-Eb-Bsd"/>
+                            <constraint firstItem="Aol-HD-hqy" firstAttribute="centerY" secondItem="R2M-Vy-CdT" secondAttribute="centerY" id="ym1-FE-Nai"/>
+                            <constraint firstAttribute="bottom" secondItem="R2M-Vy-CdT" secondAttribute="bottom" id="zTV-pK-ZUR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="eRQ-5Y-aKL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="I07-Op-ADE"/>
+                <constraint firstAttribute="bottom" secondItem="eRQ-5Y-aKL" secondAttribute="bottom" id="VXG-Fz-yKX"/>
+                <constraint firstItem="eRQ-5Y-aKL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yr9-TF-1bm"/>
+                <constraint firstAttribute="trailing" secondItem="eRQ-5Y-aKL" secondAttribute="trailing" id="lmF-L6-Tzm"/>
+            </constraints>
+            <size key="customSize" width="101" height="70"/>
+            <connections>
+                <outlet property="indicatorView" destination="R2M-Vy-CdT" id="HZQ-2d-NCA"/>
+                <outlet property="titleLabel" destination="dxz-mO-AmK" id="3wG-2W-KoS"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="13.507109004739336"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="header-black">
+            <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-purple">
+            <color red="0.3529999852180481" green="0.078000001609325409" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

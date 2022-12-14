@@ -9,13 +9,39 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
+enum ViewType: Int {
+    case listView = 0
+    case googleMaps
+}
+
 class HomeVC: BaseVC {
    
+    @IBOutlet private weak var tabsCollectionView: UICollectionView! {
+        didSet {
+            tabsCollectionView.dataSource = self
+            tabsCollectionView.delegate   = self
+            tabsCollectionView.register(cellType: TabCell.self)
+        }
+    }
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var venuesTableView: UITableView!
-    // MARK: - Private Variables
+    
+    // MARK: - Variables
     private let cLocationManager = CLLocationManager()
     weak var viewModel: HomeViewModelProtocol!
+    var tabsTitles = ["ListView", "GoogleMap"]
+    var viewtype: ViewType = .listView {
+        didSet {
+            switch viewtype {
+            case .listView:
+                venuesTableView.isHiddenIfNeeded = false
+                mapView.isHiddenIfNeeded = true
+            case .googleMaps:
+                venuesTableView.isHiddenIfNeeded = true
+                mapView.isHiddenIfNeeded = false
+            }
+        }
+    }
     
     init(viewModel: HomeViewModelProtocol) {
         super.init(baseViewModel: viewModel)
@@ -30,13 +56,18 @@ class HomeVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        venuesTableView.isHiddenIfNeeded = false
+        mapView.isHiddenIfNeeded = true
         setupBinding()
         setUpLocationManager()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tabsCollectionView.selectItem(at: IndexPath(item: 0, section: 0),
+                                      animated: true,
+                                      scrollPosition: .centeredVertically)
         viewModel.viewWillAppear()
-       
+        
     }
     func setupBinding() {
         viewModel.onSuccessFetching = { [weak self] in
@@ -98,7 +129,7 @@ extension HomeVC: CLLocationManagerDelegate {
 }
 
 extension HomeVC: GMSMapViewDelegate {
-    func goToLocation(){
+    func goToLocation() {
 
           let camera = GMSCameraPosition.camera(withLatitude: 30 , longitude: 31 , zoom: 8)
           
@@ -113,5 +144,49 @@ extension HomeVC: GMSMapViewDelegate {
            
            marker.map = self.mapView
        }
+    
+}
+
+// MARK: - Extension For UICollectionView Delegation
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return  2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(with: TabCell.self, for: indexPath)
+        cell.configure(title: tabsTitles[indexPath.item])
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.viewtype = ViewType(rawValue: indexPath.item) ?? .listView
+    }
+  
+}
+
+// MARK: - Extension For UICollectionView Layout
+extension HomeVC: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 36)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return   0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
     
 }
