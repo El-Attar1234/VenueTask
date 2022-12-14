@@ -10,6 +10,10 @@
 		2FA5B5E44FDD92CD6D40C7FB /* Pods_VenueTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */; };
 		8451CFBA294A3BED0050AAEA /* ValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */; };
 		8451CFBD294A41930050AAEA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFBC294A41930050AAEA /* SignUpViewModel.swift */; };
+		8451CFBF294A52A60050AAEA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFBE294A52A60050AAEA /* CoreDataStack.swift */; };
+		8451CFCA294A5AEA0050AAEA /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFC8294A5AEA0050AAEA /* User+CoreDataClass.swift */; };
+		8451CFCB294A5AEA0050AAEA /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFC9294A5AEA0050AAEA /* User+CoreDataProperties.swift */; };
+		8451CFCE294A60820050AAEA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFCD294A60820050AAEA /* LoginViewModel.swift */; };
 		84579804294953D50058E700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84579803294953D50058E700 /* Colors.xcassets */; };
 		84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84579807294953EF0058E700 /* Cairo-Bold.ttf */; };
 		8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8457980A294954220058E700 /* Cairo-SemiBold.ttf */; };
@@ -76,6 +80,10 @@
 		25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenueTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFactory.swift; sourceTree = "<group>"; };
 		8451CFBC294A41930050AAEA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8451CFBE294A52A60050AAEA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8451CFC8294A5AEA0050AAEA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8451CFC9294A5AEA0050AAEA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8451CFCD294A60820050AAEA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		84579803294953D50058E700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		84579807294953EF0058E700 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		8457980A294954220058E700 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -173,6 +181,14 @@
 			isa = PBXGroup;
 			children = (
 				8451CFBC294A41930050AAEA /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8451CFCC294A60700050AAEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8451CFCD294A60820050AAEA /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -465,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				84579845294957230058E700 /* Persistentmanager.swift */,
+				8451CFBE294A52A60050AAEA /* CoreDataStack.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -472,6 +489,8 @@
 		84579846294957230058E700 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8451CFC8294A5AEA0050AAEA /* User+CoreDataClass.swift */,
+				8451CFC9294A5AEA0050AAEA /* User+CoreDataProperties.swift */,
 				84579847294957230058E700 /* UserLocation.swift */,
 				84579848294957230058E700 /* Venue.swift */,
 			);
@@ -593,6 +612,7 @@
 		848C1B89294A2CD500A296FD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8451CFCC294A60700050AAEA /* ViewModel */,
 				848C1B8A294A2CE300A296FD /* View */,
 			);
 			path = Login;
@@ -885,6 +905,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451CFCE294A60820050AAEA /* LoginViewModel.swift in Sources */,
 				84579856294957230058E700 /* DataSource.swift in Sources */,
 				8457984D294957230058E700 /* HomeVC+Extension.swift in Sources */,
 				848C1B99294A381500A296FD /* UIButton+Extension.swift in Sources */,
@@ -893,6 +914,7 @@
 				8457984F294957230058E700 /* HomeVC.swift in Sources */,
 				8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */,
 				848C1B662949D9B400A296FD /* UICollectionView+Extension.swift in Sources */,
+				8451CFCB294A5AEA0050AAEA /* User+CoreDataProperties.swift in Sources */,
 				84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */,
 				84579851294957230058E700 /* ScenesContainer.swift in Sources */,
 				848C1B70294A04D100A296FD /* MoreVC.swift in Sources */,
@@ -915,6 +937,8 @@
 				8457981A294956830058E700 /* BaseView.swift in Sources */,
 				848C1B95294A2F8500A296FD /* SignUpVC.swift in Sources */,
 				8457985C294957230058E700 /* UserLocation.swift in Sources */,
+				8451CFCA294A5AEA0050AAEA /* User+CoreDataClass.swift in Sources */,
+				8451CFBF294A52A60050AAEA /* CoreDataStack.swift in Sources */,
 				848C1B9C294A384C00A296FD /* MainCustomButton.swift in Sources */,
 				84579858294957230058E700 /* HomeService.swift in Sources */,
 				848C1B622949D79900A296FD /* TabCell.swift in Sources */,

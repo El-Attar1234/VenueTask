@@ -11,9 +11,15 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-           let vc = SceneContainer.getLoginVC()
-            self.navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            if PersistenceManager.isAuthenticated() {
+                let vc = SceneContainer.getHomeVc()
+                 self.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let vc = SceneContainer.getLoginVC()
+                 self.navigationController?.pushViewController(vc, animated: true)
+            }
+          
         }
     }
 }

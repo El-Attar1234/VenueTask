@@ -11,7 +11,8 @@ import Foundation
 
 // MARK: - ValidatorType
 enum ValidatorType {
-    case name
+    case firstName
+    case lastName
     case email
     case age
     case password
@@ -42,7 +43,8 @@ enum ValidatorFactory {
     
     static func validatorFor(type: ValidatorType) -> ValidatorConvertible {
         switch type {
-        case .name: return NameValidator()
+        case .firstName: return FirstNameValidator()
+        case .lastName: return LastNameValidator()
         case .age: return AgeValidator()
         case .email: return EmailValidator()
         case .password: return PasswordValidator()
@@ -78,17 +80,27 @@ struct AgeValidator: ValidatorConvertible {
         }
     }
 }
-struct NameValidator: ValidatorConvertible {
+struct FirstNameValidator: ValidatorConvertible {
     
     func validated(value: String) throws -> String {
         let isValid = value.count >= 3
         if isValid {
             return value
         } else {
-            throw ValidationError("Name must be equal or more than three chars")
+            throw ValidationError("First Name must be equal or more than three chars")
         }
     }
+}
+struct LastNameValidator: ValidatorConvertible {
     
+    func validated(value: String) throws -> String {
+        let isValid = value.count >= 3
+        if isValid {
+            return value
+        } else {
+            throw ValidationError("Last Name must be equal or more than three chars")
+        }
+    }
 }
 struct PasswordValidator: ValidatorConvertible {
     

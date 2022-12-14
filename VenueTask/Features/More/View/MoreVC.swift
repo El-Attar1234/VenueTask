@@ -60,8 +60,9 @@ extension MoreVC: UITableViewDelegate {
             print("terms")
         case .logout:
             vc = SceneContainer.getTermsAndConditions()
-           self.navigationController?.pushViewController(vc, animated: true)
-            print("logout")
+//           self.navigationController?.pushViewController(vc, animated: true)
+            
+            print("\(PersistenceManager.getUserEmail())")
         case .none:
             vc = SceneContainer.getTermsAndConditions()
            self.navigationController?.pushViewController(vc, animated: true)

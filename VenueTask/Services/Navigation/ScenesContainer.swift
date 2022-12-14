@@ -65,7 +65,7 @@ final class SceneContainer {
     }
     
     class func getLoginVC() -> LoginVC {
-        let vc = LoginVC()
+        let vc = LoginVC(viewModel: LoginViewModel())
         return vc
     }
     
