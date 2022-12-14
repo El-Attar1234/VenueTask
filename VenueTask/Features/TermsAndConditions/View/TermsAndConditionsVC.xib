@@ -17,14 +17,85 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXS-ut-Vae">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxK-MD-BwF">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="2191.3333333333335"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-uK-1hq">
+                                    <rect key="frame" x="5" y="0.0" width="380" height="2191.3333333333335"/>
+                                    <mutableString key="text">A Terms and Conditions is not required and it's not mandatory by law.
+
+Unlike Privacy Policies, which are required by laws such as the GDPR, CalOPPA and many others, there's no law or regulation on Terms and Conditions.
+
+However, having a Terms and Conditions gives you the right to terminate the access of abusive users or to terminate the access to users who do not follow your rules and guidelines, as well as other desirable business benefits.
+
+It's extremely important to have this agreement if you operate a SaaS app.
+
+Here are a few examples of how this agreement can help you:
+
+If users abuse your website or mobile app in any way, you can terminate their account. Your "Termination" clause can inform users that their accounts would be terminated if they abuse your service.
+If users can post content on your website or mobile app (create content and share it on your platform), you can remove any content they created if it infringes copyright. Your Terms and Conditions will inform users that they can only create and/or share content they own rights to. Similarly, if users can register for an account and choose a username, you can inform users that they are not allowed to choose usernames that may infringe trademarks, i.e. usernames like Google, Facebook, and so on.
+If you sell products or services, you could cancel specific orders if a product price is incorrect. Your Terms and Conditions can include a clause to inform users that certain orders, at your sole discretion, can be canceled if the products ordered have incorrect prices due to various errors.
+And many more examples.
+In summary, while you do not legally need a Terms and Conditions agreement, there are many many reasons for you to have one. Not only will it make your business look more professional and trustworthy, but you'll also be maintaining more control over how your users are able to interact with your platforms and content.
+
+What Information to Include in Terms and Conditions
+What Information to Include in Terms and Conditions
+
+In your Terms and Conditions, you can include rules and guidelines on how users can access and use your website and mobile app.
+
+Here are a few examples:
+
+An Intellectual Property clause will inform users that the contents, logo and other visual media you created is your property and is protected by copyright laws.
+A Termination clause will inform users that any accounts on your website and mobile app, or users' access to your website and app, can be terminated in case of abuses or at your sole discretion.
+A Governing Law clause will inform users which laws govern the agreement. These laws should come from the country in which your company is headquartered or the country from which you operate your website and mobile app.
+A Links to Other Websites clause will inform users that you are not responsible for any third party websites that you link to. This kind of clause will generally inform users that they are responsible for reading and agreeing (or disagreeing) with the Terms and Conditions or Privacy Policies of these third parties.
+If your website or mobile app allows users to create content and make that content public to other users, a Content clause will inform users that they own the rights to the content they have created. This clause usually mentions that users must give you (the website or mobile app developer/owner) a license so that you can share this content on your website/mobile app and to make it available to other users.
+
+Because the content created by users is public to other users, a DMCA notice clause (or Copyright Infringement ) section is helpful to inform users and copyright authors that, if any content is found to be a copyright infringement, you will respond to any DMCA takedown notices received and you will take down the content.
+
+A Limit What Users Can Do clause can inform users that by agreeing to use your service, they're also agreeing to not do certain things. This can be part of a very long and thorough list in your Terms and Conditions agreement so as to encompass the most amount of negative uses.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="nWh-uK-1hq" firstAttribute="leading" secondItem="UxK-MD-BwF" secondAttribute="leading" constant="5" id="Aek-zv-wxP"/>
+                                <constraint firstAttribute="trailing" secondItem="nWh-uK-1hq" secondAttribute="trailing" constant="5" id="sNc-Bo-VDY"/>
+                                <constraint firstAttribute="bottom" secondItem="nWh-uK-1hq" secondAttribute="bottom" id="sdn-ca-SuS"/>
+                                <constraint firstItem="nWh-uK-1hq" firstAttribute="top" secondItem="UxK-MD-BwF" secondAttribute="top" id="zQt-s2-mdq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="UxK-MD-BwF" firstAttribute="top" secondItem="VXS-ut-Vae" secondAttribute="top" id="7SN-kS-eLI"/>
+                        <constraint firstAttribute="trailing" secondItem="UxK-MD-BwF" secondAttribute="trailing" id="CHs-GR-gam"/>
+                        <constraint firstItem="UxK-MD-BwF" firstAttribute="height" secondItem="VXS-ut-Vae" secondAttribute="height" priority="250" id="JI0-ms-Ehm"/>
+                        <constraint firstItem="UxK-MD-BwF" firstAttribute="leading" secondItem="VXS-ut-Vae" secondAttribute="leading" id="Mup-Hf-tbV"/>
+                        <constraint firstAttribute="bottom" secondItem="UxK-MD-BwF" secondAttribute="bottom" id="dsK-Gq-0kc"/>
+                        <constraint firstItem="UxK-MD-BwF" firstAttribute="width" secondItem="VXS-ut-Vae" secondAttribute="width" id="wvb-ZM-MX4"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VXS-ut-Vae" secondAttribute="bottom" id="7LV-79-z57"/>
+                <constraint firstItem="VXS-ut-Vae" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QFr-Rs-bU3"/>
+                <constraint firstItem="VXS-ut-Vae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kv3-WL-1qU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VXS-ut-Vae" secondAttribute="trailing" id="sJN-Bj-DaQ"/>
+            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                     <color key="value" systemColor="systemGreenColor"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-23" y="21"/>
+            <point key="canvasLocation" x="-162" y="21"/>
         </view>
     </objects>
     <resources>
