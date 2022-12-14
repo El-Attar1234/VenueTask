@@ -13,6 +13,9 @@
 		8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8457980A294954220058E700 /* Cairo-SemiBold.ttf */; };
 		8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457980C294954660058E700 /* XCAssets+Generated.swift */; };
 		8457980F294954740058E700 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457980E294954740058E700 /* Fonts.swift */; };
+		84579812294955250058E700 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579811294955250058E700 /* AppDelegate+Extension.swift */; };
+		84579818294956630058E700 /* BaseviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579817294956630058E700 /* BaseviewModel.swift */; };
+		8457981A294956830058E700 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579819294956830058E700 /* BaseView.swift */; };
 		84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF0E294950D20017E70B /* AppDelegate.swift */; };
 		84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF10294950D20017E70B /* SceneDelegate.swift */; };
 		84FAEF13294950D20017E70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF12294950D20017E70B /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		8457980A294954220058E700 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		8457980C294954660058E700 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		8457980E294954740058E700 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		84579811294955250058E700 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		84579817294956630058E700 /* BaseviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseviewModel.swift; sourceTree = "<group>"; };
+		84579819294956830058E700 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		84FAEF0B294950D20017E70B /* VenueTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FAEF0E294950D20017E70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FAEF10294950D20017E70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +72,10 @@
 		84579801294953960058E700 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84579813294955EB0058E700 /* Config */,
 				84579805294953DF0058E700 /* Fonts */,
 				84579802294953BC0058E700 /* Assets */,
+				84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -92,6 +100,49 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84579810294954DA0058E700 /* App+Scene Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				84FAEF0E294950D20017E70B /* AppDelegate.swift */,
+				84FAEF10294950D20017E70B /* SceneDelegate.swift */,
+				84579811294955250058E700 /* AppDelegate+Extension.swift */,
+			);
+			path = "App+Scene Delegates";
+			sourceTree = "<group>";
+		};
+		84579813294955EB0058E700 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84FAEF1F294950D40017E70B /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		845798142949563C0058E700 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				84579816294956550058E700 /* View */,
+				845798152949564E0058E700 /* ViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		845798152949564E0058E700 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84579817294956630058E700 /* BaseviewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84579816294956550058E700 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84579819294956830058E700 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84FAEF02294950D20017E70B = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +164,11 @@
 		84FAEF0D294950D20017E70B /* VenueTask */ = {
 			isa = PBXGroup;
 			children = (
+				84579810294954DA0058E700 /* App+Scene Delegates */,
 				84579801294953960058E700 /* Resources */,
-				84FAEF0E294950D20017E70B /* AppDelegate.swift */,
-				84FAEF10294950D20017E70B /* SceneDelegate.swift */,
+				845798142949563C0058E700 /* Base */,
 				84FAEF12294950D20017E70B /* ViewController.swift */,
 				84FAEF14294950D20017E70B /* Main.storyboard */,
-				84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */,
-				84FAEF1F294950D40017E70B /* Info.plist */,
 				84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */,
 			);
 			path = VenueTask;
@@ -312,7 +361,10 @@
 				8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */,
 				84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */,
 				84FAEF13294950D20017E70B /* ViewController.swift in Sources */,
+				84579812294955250058E700 /* AppDelegate+Extension.swift in Sources */,
 				84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */,
+				84579818294956630058E700 /* BaseviewModel.swift in Sources */,
+				8457981A294956830058E700 /* BaseView.swift in Sources */,
 				8457980F294954740058E700 /* Fonts.swift in Sources */,
 				84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */,
 			);
@@ -464,7 +516,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3285PZR24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VenueTask/Info.plist;
+				INFOPLIST_FILE = VenueTask/Resources/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -493,7 +545,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3285PZR24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VenueTask/Info.plist;
+				INFOPLIST_FILE = VenueTask/Resources/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

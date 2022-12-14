@@ -8,7 +8,7 @@ target 'VenueTask' do
   # Pods for VenueTask
  pod 'GooglePlaces'
 pod 'Moya'
-pod 'IQKeyboardManager'
+pod 'IQKeyboardManagerSwift', '6.3.0'
 pod 'SwiftMessages'
 pod 'MBProgressHUD'
 
