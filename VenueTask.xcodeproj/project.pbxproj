@@ -16,6 +16,30 @@
 		84579812294955250058E700 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579811294955250058E700 /* AppDelegate+Extension.swift */; };
 		84579818294956630058E700 /* BaseviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579817294956630058E700 /* BaseviewModel.swift */; };
 		8457981A294956830058E700 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579819294956830058E700 /* BaseView.swift */; };
+		84579849294957230058E700 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457981E294957220058E700 /* HomeViewModel.swift */; };
+		8457984A294957230058E700 /* Homerepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579820294957220058E700 /* Homerepository.swift */; };
+		8457984B294957230058E700 /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84579823294957220058E700 /* VenueCell.xib */; };
+		8457984C294957230058E700 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579824294957220058E700 /* VenueCell.swift */; };
+		8457984D294957230058E700 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579826294957220058E700 /* HomeVC+Extension.swift */; };
+		8457984E294957230058E700 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84579827294957220058E700 /* HomeVC.xib */; };
+		8457984F294957230058E700 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579828294957220058E700 /* HomeVC.swift */; };
+		84579850294957230058E700 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457982B294957230058E700 /* AppManager.swift */; };
+		84579851294957230058E700 /* ScenesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457982C294957230058E700 /* ScenesContainer.swift */; };
+		84579852294957230058E700 /* UIview+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457982F294957230058E700 /* UIview+Extension.swift */; };
+		84579853294957230058E700 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579831294957230058E700 /* UIFont+Extension.swift */; };
+		84579854294957230058E700 /* UItableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579833294957230058E700 /* UItableView+Extension.swift */; };
+		84579855294957230058E700 /* UItextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579835294957230058E700 /* UItextfield+Extension.swift */; };
+		84579856294957230058E700 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579838294957230058E700 /* DataSource.swift */; };
+		84579858294957230058E700 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457983E294957230058E700 /* HomeService.swift */; };
+		84579859294957230058E700 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579840294957230058E700 /* NetworkManager.swift */; };
+		8457985A294957230058E700 /* Networkerror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579842294957230058E700 /* Networkerror.swift */; };
+		8457985B294957230058E700 /* Persistentmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579845294957230058E700 /* Persistentmanager.swift */; };
+		8457985C294957230058E700 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579847294957230058E700 /* UserLocation.swift */; };
+		8457985D294957230058E700 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579848294957230058E700 /* Venue.swift */; };
+		84579862294957AB0058E700 /* Demo.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8457985E294957AB0058E700 /* Demo.xcconfig */; };
+		84579863294957AB0058E700 /* Stage.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8457985F294957AB0058E700 /* Stage.xcconfig */; };
+		84579864294957AB0058E700 /* Live.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 84579860294957AB0058E700 /* Live.xcconfig */; };
+		84579865294957AB0058E700 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84579861294957AB0058E700 /* Environment.swift */; };
 		84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF0E294950D20017E70B /* AppDelegate.swift */; };
 		84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF10294950D20017E70B /* SceneDelegate.swift */; };
 		84FAEF13294950D20017E70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF12294950D20017E70B /* ViewController.swift */; };
@@ -36,6 +60,30 @@
 		84579811294955250058E700 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		84579817294956630058E700 /* BaseviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseviewModel.swift; sourceTree = "<group>"; };
 		84579819294956830058E700 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		8457981E294957220058E700 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		84579820294957220058E700 /* Homerepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Homerepository.swift; sourceTree = "<group>"; };
+		84579823294957220058E700 /* VenueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
+		84579824294957220058E700 /* VenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		84579826294957220058E700 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
+		84579827294957220058E700 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		84579828294957220058E700 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8457982B294957230058E700 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8457982C294957230058E700 /* ScenesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesContainer.swift; sourceTree = "<group>"; };
+		8457982F294957230058E700 /* UIview+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIview+Extension.swift"; sourceTree = "<group>"; };
+		84579831294957230058E700 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		84579833294957230058E700 /* UItableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UItableView+Extension.swift"; sourceTree = "<group>"; };
+		84579835294957230058E700 /* UItextfield+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UItextfield+Extension.swift"; sourceTree = "<group>"; };
+		84579838294957230058E700 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8457983E294957230058E700 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		84579840294957230058E700 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84579842294957230058E700 /* Networkerror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkerror.swift; sourceTree = "<group>"; };
+		84579845294957230058E700 /* Persistentmanager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistentmanager.swift; sourceTree = "<group>"; };
+		84579847294957230058E700 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		84579848294957230058E700 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		8457985E294957AB0058E700 /* Demo.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Demo.xcconfig; sourceTree = "<group>"; };
+		8457985F294957AB0058E700 /* Stage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		84579860294957AB0058E700 /* Live.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Live.xcconfig; sourceTree = "<group>"; };
+		84579861294957AB0058E700 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		84FAEF0B294950D20017E70B /* VenueTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FAEF0E294950D20017E70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FAEF10294950D20017E70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +161,10 @@
 		84579813294955EB0058E700 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				8457985E294957AB0058E700 /* Demo.xcconfig */,
+				84579860294957AB0058E700 /* Live.xcconfig */,
+				8457985F294957AB0058E700 /* Stage.xcconfig */,
+				84579861294957AB0058E700 /* Environment.swift */,
 				84FAEF1F294950D40017E70B /* Info.plist */,
 			);
 			path = Config;
@@ -143,6 +195,216 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8457981B294957220058E700 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8457981C294957220058E700 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8457981C294957220058E700 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8457981D294957220058E700 /* ViewModel */,
+				8457981F294957220058E700 /* Repository */,
+				84579821294957220058E700 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8457981D294957220058E700 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8457981E294957220058E700 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8457981F294957220058E700 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				84579820294957220058E700 /* Homerepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		84579821294957220058E700 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84579822294957220058E700 /* Cell */,
+				84579825294957220058E700 /* VC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84579822294957220058E700 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84579823294957220058E700 /* VenueCell.xib */,
+				84579824294957220058E700 /* VenueCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		84579825294957220058E700 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				84579826294957220058E700 /* HomeVC+Extension.swift */,
+				84579827294957220058E700 /* HomeVC.xib */,
+				84579828294957220058E700 /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		84579829294957230058E700 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8457982A294957230058E700 /* Navigation */,
+				8457982D294957230058E700 /* Extensions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8457982A294957230058E700 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8457982B294957230058E700 /* AppManager.swift */,
+				8457982C294957230058E700 /* ScenesContainer.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8457982D294957230058E700 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8457982E294957230058E700 /* UIView */,
+				84579830294957230058E700 /* UIFont */,
+				84579832294957230058E700 /* UITableView */,
+				84579834294957230058E700 /* UITextfield */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8457982E294957230058E700 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8457982F294957230058E700 /* UIview+Extension.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		84579830294957230058E700 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				84579831294957230058E700 /* UIFont+Extension.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		84579832294957230058E700 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				84579833294957230058E700 /* UItableView+Extension.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		84579834294957230058E700 /* UITextfield */ = {
+			isa = PBXGroup;
+			children = (
+				84579835294957230058E700 /* UItextfield+Extension.swift */,
+			);
+			path = UITextfield;
+			sourceTree = "<group>";
+		};
+		84579836294957230058E700 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84579837294957230058E700 /* DataSource */,
+				8457983B294957230058E700 /* Network */,
+				84579843294957230058E700 /* Local */,
+				84579846294957230058E700 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84579837294957230058E700 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				84579838294957230058E700 /* DataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8457983B294957230058E700 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8457983C294957230058E700 /* EndPoints */,
+				8457983F294957230058E700 /* Manager */,
+				84579841294957230058E700 /* Error */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8457983C294957230058E700 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				8457983D294957230058E700 /* Home */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		8457983D294957230058E700 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8457983E294957230058E700 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8457983F294957230058E700 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				84579840294957230058E700 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		84579841294957230058E700 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				84579842294957230058E700 /* Networkerror.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		84579843294957230058E700 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */,
+				84579844294957230058E700 /* Manager */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		84579844294957230058E700 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				84579845294957230058E700 /* Persistentmanager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		84579846294957230058E700 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84579847294957230058E700 /* UserLocation.swift */,
+				84579848294957230058E700 /* Venue.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84FAEF02294950D20017E70B = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +429,11 @@
 				84579810294954DA0058E700 /* App+Scene Delegates */,
 				84579801294953960058E700 /* Resources */,
 				845798142949563C0058E700 /* Base */,
+				84579829294957230058E700 /* Services */,
+				8457981B294957220058E700 /* Features */,
+				84579836294957230058E700 /* Data */,
 				84FAEF12294950D20017E70B /* ViewController.swift */,
 				84FAEF14294950D20017E70B /* Main.storyboard */,
-				84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */,
 			);
 			path = VenueTask;
 			sourceTree = "<group>";
@@ -246,11 +510,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FAEF1E294950D40017E70B /* LaunchScreen.storyboard in Resources */,
+				84579864294957AB0058E700 /* Live.xcconfig in Resources */,
+				84579863294957AB0058E700 /* Stage.xcconfig in Resources */,
 				84579804294953D50058E700 /* Colors.xcassets in Resources */,
 				84FAEF1B294950D40017E70B /* Images.xcassets in Resources */,
 				84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */,
 				84FAEF16294950D20017E70B /* Main.storyboard in Resources */,
+				8457984E294957230058E700 /* HomeVC.xib in Resources */,
+				8457984B294957230058E700 /* VenueCell.xib in Resources */,
 				8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */,
+				84579862294957AB0058E700 /* Demo.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,15 +627,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84579856294957230058E700 /* DataSource.swift in Sources */,
+				8457984D294957230058E700 /* HomeVC+Extension.swift in Sources */,
+				84579854294957230058E700 /* UItableView+Extension.swift in Sources */,
+				8457985A294957230058E700 /* Networkerror.swift in Sources */,
+				8457984F294957230058E700 /* HomeVC.swift in Sources */,
 				8457980D294954660058E700 /* XCAssets+Generated.swift in Sources */,
 				84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */,
+				84579851294957230058E700 /* ScenesContainer.swift in Sources */,
 				84FAEF13294950D20017E70B /* ViewController.swift in Sources */,
+				84579853294957230058E700 /* UIFont+Extension.swift in Sources */,
+				84579849294957230058E700 /* HomeViewModel.swift in Sources */,
+				84579850294957230058E700 /* AppManager.swift in Sources */,
+				8457984A294957230058E700 /* Homerepository.swift in Sources */,
+				84579859294957230058E700 /* NetworkManager.swift in Sources */,
 				84579812294955250058E700 /* AppDelegate+Extension.swift in Sources */,
 				84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */,
+				8457985B294957230058E700 /* Persistentmanager.swift in Sources */,
+				84579865294957AB0058E700 /* Environment.swift in Sources */,
+				8457985D294957230058E700 /* Venue.swift in Sources */,
+				84579855294957230058E700 /* UItextfield+Extension.swift in Sources */,
 				84579818294956630058E700 /* BaseviewModel.swift in Sources */,
 				8457981A294956830058E700 /* BaseView.swift in Sources */,
+				8457985C294957230058E700 /* UserLocation.swift in Sources */,
+				84579858294957230058E700 /* HomeService.swift in Sources */,
+				8457984C294957230058E700 /* VenueCell.swift in Sources */,
 				8457980F294954740058E700 /* Fonts.swift in Sources */,
 				84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */,
+				84579852294957230058E700 /* UIview+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

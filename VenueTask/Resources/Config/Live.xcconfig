@@ -1,0 +1,13 @@
+//
+//  Live.xcconfig
+//  VenuesTask
+//
+//  Created by Ibtikar on 13/12/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL = https:/$()/api.foursquare.com
+CLIENT_ID = 4EQRZPSGKBZGFSERGJY055FRW2OSPJRZYR4C3J0JN2CQQFIV
+CLIENT_SECRET = AJR4B5LLRONWAJWJJOACHAFLCWS2YJAZMGQNFFZQP0IB3THR
+V = 20180910
