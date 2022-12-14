@@ -15,7 +15,7 @@ enum ViewType: Int {
 }
 
 class HomeVC: BaseVC {
-   
+    
     @IBOutlet private weak var tabsCollectionView: UICollectionView! {
         didSet {
             tabsCollectionView.dataSource = self
@@ -30,10 +30,12 @@ class HomeVC: BaseVC {
     private let cLocationManager = CLLocationManager()
     weak var viewModel: HomeViewModelProtocol!
     var tabsTitles = ["ListView", "GoogleMap"]
+    private var infoWindow = CustomMapMarkerWindow(frame: .zero)
     var viewtype: ViewType = .listView {
         didSet {
             switch viewtype {
             case .listView:
+                infoWindow.removeFromSuperview()
                 venuesTableView.isHiddenIfNeeded = false
                 mapView.isHiddenIfNeeded = true
             case .googleMaps:
@@ -52,12 +54,11 @@ class HomeVC: BaseVC {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTableView()
-        venuesTableView.isHiddenIfNeeded = false
-        mapView.isHiddenIfNeeded = true
+        infoWindow.removeFromSuperview()
+        setupInitialUI()
         setupBinding()
         setUpLocationManager()
     }
@@ -69,124 +70,120 @@ class HomeVC: BaseVC {
         viewModel.viewWillAppear()
         
     }
-    func setupBinding() {
-        viewModel.onSuccessFetching = { [weak self] in
-            guard let self else { return }
-            self.venuesTableView.reloadData()
-        }
+}
+// MARK: - Initial
+extension HomeVC {
+    private func setupInitialUI() {
+        venuesTableView.isHiddenIfNeeded = false
+        mapView.isHiddenIfNeeded = true
+        setUpTableView()
     }
     private func setUpTableView() {
         venuesTableView.dataSource = self
         venuesTableView.delegate   = self
         venuesTableView.register(cellType: VenueCell.self)
     }
+    func setupBinding() {
+        viewModel.onSuccessFetching = { [weak self] in
+            guard let self else { return }
+            self.venuesTableView.reloadData()
+            self.addMarkers()
+        }
+    }
     private func setUpLocationManager() {
-      //  mapView.delegate = self
+         mapView.delegate = self
         cLocationManager.delegate = self
         cLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationAuthStatus()
-            
-        }
-        func locationAuthStatus() {
-            switch cLocationManager.authorizationStatus {
-            case .notDetermined:
-                cLocationManager.requestWhenInUseAuthorization()
-            case .restricted, .denied:
-                print("denied")
-//                    self.hideLoadingIndicator()
-//                   setUpLocationDeniedCase()
-            case .authorizedAlways, .authorizedWhenInUse:
-                print("Access") // go to map
-                cLocationManager.startUpdatingLocation()
-            @unknown default:
-                break
-            }
-        }
         
+    }
+    func locationAuthStatus() {
+        switch cLocationManager.authorizationStatus {
+        case .notDetermined:
+            cLocationManager.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            print("denied")
+            //                    self.hideLoadingIndicator()
+            //                   setUpLocationDeniedCase()
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("Access") // go to map
+            cLocationManager.startUpdatingLocation()
+        @unknown default:
+            break
+        }
+    }
 }
-
+// MARK: - Location
 extension HomeVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-      //  self.showLoadingIndicator()
+        //  self.showLoadingIndicator()
         guard let location: CLLocation = locations.last else {
             return
         }
-
+        
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         let userLocation = UserLocation(latitude: latitude, longitude: longitude)
         PersistenceManager.save(value: userLocation)
         print("Lat \(latitude)")
         print("Long \(longitude)")
-
+        
         cLocationManager.stopUpdatingLocation()
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         locationAuthStatus()
+    }
+    func addMarkers() {
+        for index in 0..<viewModel.getVenuesCount() {
+            
+            let venue = viewModel.getVenue(item: index)
+            let lat = venue?.location?.lat ?? 0
+            let long = venue?.location?.lng ?? 0
+            
+            let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 17)
+            mapView.camera = camera
+            print(venue?.name)
+            
+            let marker: GMSMarker = GMSMarker() // Allocating Marker
+//            marker.title = venue?.name
+//            marker.snippet = "Sub title" // Setting sub title
+            marker.userData = venue
+           // marker.icon = Asset.Images.icNoData.image
+            marker.appearAnimation = .pop // Appearing animation. default
+            marker.position = CLLocationCoordinate2DMake(lat, long) // CLLocationCoordinate2D
+            DispatchQueue.main.async {[weak self] in
+                // Setting marker on mapview in main thread.
+                marker.map = self?.mapView // Setting marker on Mapview
+            }
+        }
+        
     }
 }
 
 extension HomeVC: GMSMapViewDelegate {
-    func goToLocation() {
-
-          let camera = GMSCameraPosition.camera(withLatitude: 30 , longitude: 31 , zoom: 8)
-          
-          mapView.camera = camera
-          
-      }
-    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-           
-           let position = CLLocationCoordinate2D(latitude: 30, longitude: 31)
-           
-           let marker = GMSMarker(position: position)
-           
-           marker.map = self.mapView
-       }
-    
-}
-
-// MARK: - Extension For UICollectionView Delegation
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  2
+    // if you click on marker itself
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let venue = marker.userData as? Venue
+        infoWindow.removeFromSuperview()
+        let frame = CGRect(x: 10, y: 10, width: 200, height: 200)
+        infoWindow = CustomMapMarkerWindow(frame: .zero)
+        infoWindow.frame = frame
+        infoWindow.alpha = 0.9
+           infoWindow.layer.cornerRadius = 12
+           infoWindow.layer.borderWidth = 2
+        infoWindow.layer.borderColor = UIColor(named: "19E698")?.cgColor
+        infoWindow.center = mapView.projection.point(for: marker.position)
+        infoWindow.center.y += 50
+       // infoWindow.backgroundView.backgroundColor = .red
+        infoWindow.setup(venue: venue)
+        self.view.addSubview(infoWindow)
+       return false
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(with: TabCell.self, for: indexPath)
-        cell.configure(title: tabsTitles[indexPath.item])
-        return cell
-        
+    // if you click on place outside marker
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        infoWindow.removeFromSuperview()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.viewtype = ViewType(rawValue: indexPath.item) ?? .listView
-    }
-  
-}
-
-// MARK: - Extension For UICollectionView Layout
-extension HomeVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 36)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return   0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
 }

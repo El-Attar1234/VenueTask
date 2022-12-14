@@ -44,10 +44,10 @@
 		848C1B622949D79900A296FD /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B602949D79900A296FD /* TabCell.swift */; };
 		848C1B632949D79900A296FD /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848C1B612949D79900A296FD /* TabCell.xib */; };
 		848C1B662949D9B400A296FD /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B652949D9B400A296FD /* UICollectionView+Extension.swift */; };
+		848C1B692949EA2400A296FD /* CustomMapMarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848C1B682949EA2400A296FD /* CustomMapMarkerWindow.xib */; };
+		848C1B6B2949EA8B00A296FD /* CustomMapMarkerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C1B6A2949EA8B00A296FD /* CustomMapMarkerWindow.swift */; };
 		84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF0E294950D20017E70B /* AppDelegate.swift */; };
 		84FAEF11294950D20017E70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF10294950D20017E70B /* SceneDelegate.swift */; };
-		84FAEF13294950D20017E70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF12294950D20017E70B /* ViewController.swift */; };
-		84FAEF16294950D20017E70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF14294950D20017E70B /* Main.storyboard */; };
 		84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84FAEF17294950D20017E70B /* VenueTask.xcdatamodeld */; };
 		84FAEF1B294950D40017E70B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF1A294950D40017E70B /* Images.xcassets */; };
 		84FAEF1E294950D40017E70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */; };
@@ -92,11 +92,11 @@
 		848C1B602949D79900A296FD /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		848C1B612949D79900A296FD /* TabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
 		848C1B652949D9B400A296FD /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		848C1B682949EA2400A296FD /* CustomMapMarkerWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMapMarkerWindow.xib; sourceTree = "<group>"; };
+		848C1B6A2949EA8B00A296FD /* CustomMapMarkerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarkerWindow.swift; sourceTree = "<group>"; };
 		84FAEF0B294950D20017E70B /* VenueTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FAEF0E294950D20017E70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FAEF10294950D20017E70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84FAEF12294950D20017E70B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84FAEF15294950D20017E70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FAEF18294950D20017E70B /* VenueTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueTask.xcdatamodel; sourceTree = "<group>"; };
 		84FAEF1A294950D40017E70B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84FAEF1D294950D40017E70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -241,6 +241,7 @@
 		84579821294957220058E700 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				848C1B672949E9F900A296FD /* Custom Window */,
 				84579822294957220058E700 /* Cell */,
 				84579825294957220058E700 /* VC */,
 			);
@@ -441,6 +442,15 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
+		848C1B672949E9F900A296FD /* Custom Window */ = {
+			isa = PBXGroup;
+			children = (
+				848C1B682949EA2400A296FD /* CustomMapMarkerWindow.xib */,
+				848C1B6A2949EA8B00A296FD /* CustomMapMarkerWindow.swift */,
+			);
+			path = "Custom Window";
+			sourceTree = "<group>";
+		};
 		84FAEF02294950D20017E70B = {
 			isa = PBXGroup;
 			children = (
@@ -468,8 +478,6 @@
 				84579829294957230058E700 /* Services */,
 				8457981B294957220058E700 /* Features */,
 				84579836294957230058E700 /* Data */,
-				84FAEF12294950D20017E70B /* ViewController.swift */,
-				84FAEF14294950D20017E70B /* Main.storyboard */,
 			);
 			path = VenueTask;
 			sourceTree = "<group>";
@@ -548,12 +556,12 @@
 				84FAEF1E294950D40017E70B /* LaunchScreen.storyboard in Resources */,
 				84579868294958830058E700 /* InfoPlist.strings in Resources */,
 				84579864294957AB0058E700 /* Live.xcconfig in Resources */,
+				848C1B692949EA2400A296FD /* CustomMapMarkerWindow.xib in Resources */,
 				84579863294957AB0058E700 /* Stage.xcconfig in Resources */,
 				84579804294953D50058E700 /* Colors.xcassets in Resources */,
 				84FAEF1B294950D40017E70B /* Images.xcassets in Resources */,
 				84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */,
 				848C1B632949D79900A296FD /* TabCell.xib in Resources */,
-				84FAEF16294950D20017E70B /* Main.storyboard in Resources */,
 				8457984E294957230058E700 /* HomeVC.xib in Resources */,
 				8457984B294957230058E700 /* VenueCell.xib in Resources */,
 				8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */,
@@ -674,11 +682,11 @@
 				848C1B662949D9B400A296FD /* UICollectionView+Extension.swift in Sources */,
 				84FAEF19294950D20017E70B /* VenueTask.xcdatamodeld in Sources */,
 				84579851294957230058E700 /* ScenesContainer.swift in Sources */,
-				84FAEF13294950D20017E70B /* ViewController.swift in Sources */,
 				84579853294957230058E700 /* UIFont+Extension.swift in Sources */,
 				84579849294957230058E700 /* HomeViewModel.swift in Sources */,
 				84579850294957230058E700 /* AppManager.swift in Sources */,
 				8457984A294957230058E700 /* Homerepository.swift in Sources */,
+				848C1B6B2949EA8B00A296FD /* CustomMapMarkerWindow.swift in Sources */,
 				84579859294957230058E700 /* NetworkManager.swift in Sources */,
 				84579812294955250058E700 /* AppDelegate+Extension.swift in Sources */,
 				84FAEF0F294950D20017E70B /* AppDelegate.swift in Sources */,
@@ -701,14 +709,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84FAEF14294950D20017E70B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84FAEF15294950D20017E70B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84FAEF1C294950D40017E70B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

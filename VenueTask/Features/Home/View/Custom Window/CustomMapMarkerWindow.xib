@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomMapMarkerWindow" customModule="VenueTask" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="HLh-hX-W1b" id="Hqa-Bu-QXD"/>
+                <outlet property="venueCategoryLabel" destination="iMa-dL-yum" id="AKB-V7-WwW"/>
+                <outlet property="venueLocationLabel" destination="gol-f3-Bgm" id="cbm-Wu-1pV"/>
+                <outlet property="venueNameLabel" destination="C6W-ML-qJe" id="tR7-Ku-Lqj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="555" height="196"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLh-hX-W1b">
+                    <rect key="frame" x="0.0" y="47" width="555" height="115"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_data" translatesAutoresizingMaskIntoConstraints="NO" id="st7-lO-Xjx">
+                            <rect key="frame" x="2" y="14" width="40" height="87"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="HsE-uY-RTb"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6W-ML-qJe">
+                            <rect key="frame" x="47" y="2" width="42" height="34"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
+                            <color key="textColor" name="header-black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gol-f3-Bgm">
+                            <rect key="frame" x="47" y="39" width="42" height="34"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
+                            <color key="textColor" name="header-black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMa-dL-yum">
+                            <rect key="frame" x="47" y="76" width="42" height="34"/>
+                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
+                            <color key="textColor" name="header-black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="C6W-ML-qJe" firstAttribute="top" secondItem="HLh-hX-W1b" secondAttribute="top" constant="2" id="1IY-eV-wlw"/>
+                        <constraint firstItem="gol-f3-Bgm" firstAttribute="leading" secondItem="C6W-ML-qJe" secondAttribute="leading" id="27E-D0-Q5y"/>
+                        <constraint firstItem="gol-f3-Bgm" firstAttribute="top" secondItem="C6W-ML-qJe" secondAttribute="bottom" constant="3" id="C1J-RA-cFS"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iMa-dL-yum" secondAttribute="trailing" constant="2" id="IJk-7L-nlH"/>
+                        <constraint firstItem="st7-lO-Xjx" firstAttribute="leading" secondItem="HLh-hX-W1b" secondAttribute="leading" constant="2" id="Iwx-E5-eUk"/>
+                        <constraint firstItem="iMa-dL-yum" firstAttribute="top" secondItem="gol-f3-Bgm" secondAttribute="bottom" constant="3" id="XDa-cN-Ek1"/>
+                        <constraint firstItem="C6W-ML-qJe" firstAttribute="leading" secondItem="st7-lO-Xjx" secondAttribute="trailing" constant="5" id="XO8-Z4-PtZ"/>
+                        <constraint firstItem="st7-lO-Xjx" firstAttribute="centerY" secondItem="HLh-hX-W1b" secondAttribute="centerY" id="dJr-iW-jyy"/>
+                        <constraint firstItem="iMa-dL-yum" firstAttribute="leading" secondItem="gol-f3-Bgm" secondAttribute="leading" id="hfF-pe-t4i"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gol-f3-Bgm" secondAttribute="trailing" constant="2" id="kod-Kx-Wru"/>
+                        <constraint firstAttribute="bottom" secondItem="iMa-dL-yum" secondAttribute="bottom" constant="5" id="oqh-s5-jFh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="HLh-hX-W1b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PG6-HG-7la"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HLh-hX-W1b" secondAttribute="bottom" id="Pho-XD-usV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HLh-hX-W1b" secondAttribute="trailing" id="cfk-9u-7lG"/>
+                <constraint firstItem="HLh-hX-W1b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kgy-JT-rCI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-56.153846153846153" y="28.080568720379144"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_no_data" width="66" height="87"/>
+        <namedColor name="header-black">
+            <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
