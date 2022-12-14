@@ -12,7 +12,7 @@ class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-           let vc = SceneContainer.getHomeVc()
+           let vc = SceneContainer.getLoginVC()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

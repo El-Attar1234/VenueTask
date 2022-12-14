@@ -32,11 +32,13 @@ internal enum Asset {
   }
   internal enum Images {
     internal static let accentColor = ColorAsset(name: "AccentColor")
+    internal static let hide = ImageAsset(name: "hide")
     internal static let icMenu = ImageAsset(name: "ic_menu")
     internal static let icNoData = ImageAsset(name: "ic_no_data")
     internal static let illustrationLogin = ImageAsset(name: "illustration_login")
     internal static let logout = ImageAsset(name: "logout")
     internal static let rightArrow = ImageAsset(name: "right_arrow")
+    internal static let show = ImageAsset(name: "show")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

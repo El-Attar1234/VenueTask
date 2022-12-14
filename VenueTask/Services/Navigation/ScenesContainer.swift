@@ -63,4 +63,14 @@ final class SceneContainer {
         let vc = TermsAndConditionsVC()
         return vc
     }
+    
+    class func getLoginVC() -> LoginVC {
+        let vc = LoginVC()
+        return vc
+    }
+    
+    class func signUpVC() -> SignUpVC {
+        let vc = SignUpVC()
+        return vc
+    }
 }
