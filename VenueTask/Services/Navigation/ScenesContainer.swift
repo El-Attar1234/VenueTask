@@ -70,7 +70,7 @@ final class SceneContainer {
     }
     
     class func signUpVC() -> SignUpVC {
-        let vc = SignUpVC()
+        let vc = SignUpVC(viewModel: SignUpViewModel())
         return vc
     }
 }

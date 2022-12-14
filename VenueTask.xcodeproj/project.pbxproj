@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FA5B5E44FDD92CD6D40C7FB /* Pods_VenueTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */; };
 		8451CFBA294A3BED0050AAEA /* ValidationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */; };
+		8451CFBD294A41930050AAEA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451CFBC294A41930050AAEA /* SignUpViewModel.swift */; };
 		84579804294953D50058E700 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84579803294953D50058E700 /* Colors.xcassets */; };
 		84579809294953EF0058E700 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84579807294953EF0058E700 /* Cairo-Bold.ttf */; };
 		8457980B294954220058E700 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8457980A294954220058E700 /* Cairo-SemiBold.ttf */; };
@@ -74,6 +75,7 @@
 		1401874D2F786577090563BD /* Pods-VenueTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenueTask.release.xcconfig"; path = "Target Support Files/Pods-VenueTask/Pods-VenueTask.release.xcconfig"; sourceTree = "<group>"; };
 		25666074A942CC077B2C7AC4 /* Pods_VenueTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenueTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFactory.swift; sourceTree = "<group>"; };
+		8451CFBC294A41930050AAEA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		84579803294953D50058E700 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		84579807294953EF0058E700 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		8457980A294954220058E700 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 				8451CFB9294A3BED0050AAEA /* ValidationFactory.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		8451CFBB294A417B0050AAEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8451CFBC294A41930050AAEA /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		84579801294953960058E700 /* Resources */ = {
@@ -608,6 +618,7 @@
 		848C1B90294A2F5700A296FD /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				8451CFBB294A417B0050AAEA /* ViewModel */,
 				848C1B91294A2F6100A296FD /* View */,
 			);
 			path = SignUp;
@@ -908,6 +919,7 @@
 				84579858294957230058E700 /* HomeService.swift in Sources */,
 				848C1B622949D79900A296FD /* TabCell.swift in Sources */,
 				848C1B82294A14F700A296FD /* MoreDataService.swift in Sources */,
+				8451CFBD294A41930050AAEA /* SignUpViewModel.swift in Sources */,
 				8457984C294957230058E700 /* VenueCell.swift in Sources */,
 				848C1B75294A05FA00A296FD /* MoreCell.swift in Sources */,
 				848C1B7E294A10F500A296FD /* SplashVC.swift in Sources */,

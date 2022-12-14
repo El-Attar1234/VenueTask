@@ -16,6 +16,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="VenueTask" customModuleProvider="target">
             <connections>
+                <outlet property="ageTF" destination="TbI-35-iXE" id="T9V-xo-M3t"/>
+                <outlet property="confirmationPasswordTF" destination="noW-eu-vxa" id="ckJ-ln-qkc"/>
+                <outlet property="emailTF" destination="6WU-91-L4I" id="Etd-0g-iRo"/>
+                <outlet property="firstNameTF" destination="fpy-mC-Wpz" id="zCd-km-x2z"/>
+                <outlet property="lastNameTF" destination="plQ-8X-R4R" id="hr4-v6-g6M"/>
+                <outlet property="passwordTF" destination="TvT-Ji-fm2" id="HF2-oK-tbh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -304,6 +310,9 @@
                                         <constraint firstAttribute="height" constant="52" id="674-Y6-JuT"/>
                                     </constraints>
                                     <state key="normal" title="Sign Up"/>
+                                    <connections>
+                                        <action selector="signupButtonTapped:" destination="-1" eventType="touchUpInside" id="B6s-WC-WI1"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
