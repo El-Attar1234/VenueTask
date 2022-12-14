@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
+import SideMenu
 
 enum ViewType: Int {
     case listView = 0
@@ -31,6 +32,8 @@ class HomeVC: BaseVC {
     weak var viewModel: HomeViewModelProtocol!
     var tabsTitles = ["ListView", "GoogleMap"]
     private var infoWindow = CustomMapMarkerWindow(frame: .zero)
+    private var overlayView = UIView()
+    
     var viewtype: ViewType = .listView {
         didSet {
             switch viewtype {
@@ -64,11 +67,45 @@ class HomeVC: BaseVC {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       // setUpNavBar()
+        self.navigationController?.navigationBar.isHidden = true
         tabsCollectionView.selectItem(at: IndexPath(item: 0, section: 0),
                                       animated: true,
                                       scrollPosition: .centeredVertically)
         viewModel.viewWillAppear()
         
+    }
+    
+    @IBAction func openSideMenu(_ sender: Any) {
+        let menu = SceneContainer.openSideMenu()
+        menu.sideMenuDelegate = self
+        self.present(menu, animated: true)
+    }
+    
+    
+    
+    func setUpNavBar() {
+        print(navigationController)
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
+     //   self.navigationController?.navigationBar.transparentNavigationBar()
+        
+        let leftBarButtonItem = UIBarButtonItem(
+            image: Asset.Images.icMenu.image,
+            style: .plain,
+            target: self,
+            action: #selector(mainMenuTapped))
+        
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
+        self.navigationItem.leftBarButtonItem?.tintColor = Asset.Colors.mainPurple.color
+    }
+    @objc
+    func mainMenuTapped() {
+        let menu = SceneContainer.openSideMenu()
+        menu.sideMenuDelegate = self
+        self.present(menu, animated: true)
     }
 }
 // MARK: - Initial
@@ -76,6 +113,10 @@ extension HomeVC {
     private func setupInitialUI() {
         venuesTableView.isHiddenIfNeeded = false
         mapView.isHiddenIfNeeded = true
+        // overlay creation
+        overlayView.backgroundColor = .black
+        overlayView.alpha = 0.47
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
         setUpTableView()
     }
     private func setUpTableView() {
@@ -186,4 +227,26 @@ extension HomeVC: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         infoWindow.removeFromSuperview()
     }
+}
+
+extension HomeVC: SideMenuNavigationControllerDelegate {
+    
+    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
+        if let viewToInsertIn = self.view {
+            viewToInsertIn.insertSubview(overlayView, at: viewToInsertIn.subviews.count)
+            overlayView.leadingAnchor.constraint(equalTo: viewToInsertIn.leadingAnchor).isActive = true
+            overlayView.trailingAnchor.constraint(equalTo: viewToInsertIn.trailingAnchor).isActive = true
+            overlayView.topAnchor.constraint(equalTo: viewToInsertIn.topAnchor).isActive = true
+            overlayView.bottomAnchor.constraint(equalTo: viewToInsertIn.bottomAnchor).isActive = true
+        }
+    }
+
+    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.overlayView.removeFromSuperview()
+        }, completion: {_ in
+            self.overlayView.removeFromSuperview()
+        })
+    }
+ 
 }

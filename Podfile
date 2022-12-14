@@ -12,5 +12,6 @@ pod 'Moya'
 pod 'IQKeyboardManagerSwift', '6.3.0'
 pod 'SwiftMessages'
 pod 'MBProgressHUD'
+pod 'SideMenu'
 
 end

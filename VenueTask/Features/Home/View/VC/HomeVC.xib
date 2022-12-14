@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="d8j-B2-Vje">
-                    <rect key="frame" x="95" y="52" width="200" height="36"/>
+                    <rect key="frame" x="95" y="57" width="200" height="36"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="65g-fk-9on"/>
@@ -36,8 +36,17 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-i5-0ei">
+                    <rect key="frame" x="5" y="61.666666666666657" width="27" height="27"/>
+                    <color key="tintColor" name="main-purple"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="ic_menu"/>
+                    <connections>
+                        <action selector="openSideMenu:" destination="-1" eventType="touchUpInside" id="Mbh-2g-nTT"/>
+                    </connections>
+                </button>
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-IC-F2E" userLabel="Gray Separtor View">
-                    <rect key="frame" x="0.0" y="86.666666666666671" width="390" height="0.3333333333333286"/>
+                    <rect key="frame" x="0.0" y="91.666666666666671" width="390" height="0.3333333333333286"/>
                     <color key="backgroundColor" name="header-black"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="YFj-xJ-upz"/>
@@ -45,37 +54,43 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-4X-oCC" customClass="GMSMapView">
-                    <rect key="frame" x="10" y="98" width="370" height="692"/>
+                    <rect key="frame" x="10" y="103" width="370" height="687"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxo-Pr-Y8o">
-                    <rect key="frame" x="10" y="98" width="370" height="692"/>
+                    <rect key="frame" x="10" y="103" width="370" height="687"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fwM-i5-0ei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="4cz-j5-Zn1"/>
                 <constraint firstItem="3qp-IC-F2E" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="-1.5" id="69o-Yt-1oZ"/>
                 <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="10" id="AxB-oz-0AV"/>
                 <constraint firstItem="lYw-4X-oCC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="CJk-O0-iX4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yxo-Pr-Y8o" secondAttribute="trailing" constant="10" id="ECh-JT-yjh"/>
                 <constraint firstItem="d8j-B2-Vje" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FXh-a0-evv"/>
-                <constraint firstItem="d8j-B2-Vje" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="J1U-E4-Lh1"/>
+                <constraint firstItem="d8j-B2-Vje" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="J1U-E4-Lh1"/>
                 <constraint firstItem="lYw-4X-oCC" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="10" id="Nme-lb-Qf5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lYw-4X-oCC" secondAttribute="trailing" constant="10" id="Trn-i6-YD0"/>
                 <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Vtj-ls-AiF"/>
                 <constraint firstAttribute="trailing" secondItem="3qp-IC-F2E" secondAttribute="trailing" id="Wj3-Fo-X6s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lYw-4X-oCC" secondAttribute="bottom" constant="20" id="ZSi-aL-K3E"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yxo-Pr-Y8o" secondAttribute="bottom" constant="20" id="oSG-5H-dbG"/>
+                <constraint firstItem="fwM-i5-0ei" firstAttribute="centerY" secondItem="d8j-B2-Vje" secondAttribute="centerY" id="sm0-zy-xYM"/>
                 <constraint firstItem="3qp-IC-F2E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yvh-x8-gCH"/>
             </constraints>
             <point key="canvasLocation" x="12" y="21"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_menu" width="27" height="27"/>
         <namedColor name="header-black">
             <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-purple">
+            <color red="0.3529999852180481" green="0.078000001609325409" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

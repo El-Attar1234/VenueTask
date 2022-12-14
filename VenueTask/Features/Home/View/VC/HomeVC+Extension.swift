@@ -24,8 +24,9 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         return   UITableView.automaticDimension
     }
    
-   
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+    }
 }
 
 // MARK: - Extension For UICollectionView Delegation

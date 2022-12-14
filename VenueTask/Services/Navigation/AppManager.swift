@@ -17,7 +17,7 @@ final class AppManager {
     
     func initWindow(_ window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)) {
         self.window = window
-        window?.rootViewController = SceneContainer.embedVCInNavController(SceneContainer.getHomeVc())
+        window?.rootViewController = SceneContainer.embedVCInNavController(SceneContainer.getSplashVc())
         window?.makeKeyAndVisible()
         
     }
