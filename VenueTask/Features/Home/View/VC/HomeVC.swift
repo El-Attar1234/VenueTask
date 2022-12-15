@@ -159,21 +159,17 @@ extension HomeVC: CLLocationManagerDelegate {
 }
 
 extension HomeVC: GMSMapViewDelegate {
+    
     // if you click on marker itself
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let venue = marker.userData as? Venue
         infoWindow.removeFromSuperview()
-        let frame = CGRect(x: 10, y: 10, width: 200, height: 200)
-        infoWindow = CustomMapMarkerWindow(frame: .zero)
-        infoWindow.frame = frame
-        infoWindow.alpha = 0.9
-           infoWindow.layer.cornerRadius = 12
-           infoWindow.layer.borderWidth = 2
-        infoWindow.layer.borderColor = UIColor(named: "19E698")?.cgColor
+        let frame = CGRect(x: 0, y: 0, width: 200, height: 140)
+        infoWindow = CustomMapMarkerWindow(frame: frame)
+        infoWindow.setup(venue: venue)
+        infoWindow.alpha = 0.8
         infoWindow.center = mapView.projection.point(for: marker.position)
         infoWindow.center.y += 50
-       // infoWindow.backgroundView.backgroundColor = .red
-        infoWindow.setup(venue: venue)
         self.view.addSubview(infoWindow)
        return false
     }
