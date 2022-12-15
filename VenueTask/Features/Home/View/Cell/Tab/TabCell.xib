@@ -27,8 +27,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="101" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ListView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-mO-AmK">
-                                <rect key="frame" x="29.000000000000004" y="0.0" width="43.333333333333343" height="57"/>
-                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="12"/>
+                                <rect key="frame" x="25.333333333333332" y="0.0" width="50.666666666666671" height="57"/>
+                                <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
                                 <color key="textColor" name="header-black"/>
                                 <nil key="highlightedColor"/>
                             </label>
