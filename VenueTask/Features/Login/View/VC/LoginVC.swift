@@ -8,18 +8,19 @@
 import UIKit
 
 class LoginVC: BaseVC {
-
+    // MARK: - Outlets
     @IBOutlet private weak var passwordTF: UITextField!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet private weak var showPasswordButton: UIButton!
     @IBOutlet private weak var emailTF: UITextField!
     
+    // MARK: - Outlets
     weak var viewModel: LoginViewModelProtocol!
     var isSecurePassword = true
     
+    // MARK: - ViewLifeCycle
     init(viewModel: LoginViewModelProtocol) {
         super.init(baseViewModel: viewModel)
         self.viewModel = viewModel
-        
     }
     
     required init?(coder: NSCoder) {
@@ -29,7 +30,7 @@ class LoginVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -68,6 +69,8 @@ class LoginVC: BaseVC {
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
+}
+extension LoginVC {
     func setupBinding() {
         viewModel.onSuccessLogIned = {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -90,5 +93,5 @@ class LoginVC: BaseVC {
             .validated(value: passwordTF.text ?? "")
         return valid
     }
-    
 }
+

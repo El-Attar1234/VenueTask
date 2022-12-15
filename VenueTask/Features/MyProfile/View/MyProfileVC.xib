@@ -33,13 +33,13 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-TC-9hf">
-                                    <rect key="frame" x="25" y="95" width="340" height="638"/>
+                                    <rect key="frame" x="25" y="105" width="340" height="628"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="DAz-TC-9hf" firstAttribute="top" secondItem="adV-yD-PRq" secondAttribute="bottom" constant="10" id="5b1-xs-ukE"/>
+                                <constraint firstItem="DAz-TC-9hf" firstAttribute="top" secondItem="adV-yD-PRq" secondAttribute="bottom" constant="20" id="5b1-xs-ukE"/>
                                 <constraint firstItem="DAz-TC-9hf" firstAttribute="leading" secondItem="pu2-VO-FCX" secondAttribute="leading" constant="25" id="6fg-FA-dBZ"/>
                                 <constraint firstAttribute="bottom" secondItem="DAz-TC-9hf" secondAttribute="bottom" id="MUe-ao-G0M"/>
                                 <constraint firstAttribute="trailing" secondItem="DAz-TC-9hf" secondAttribute="trailing" constant="25" id="MYs-YO-fRy"/>

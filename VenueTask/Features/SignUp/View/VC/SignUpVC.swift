@@ -8,24 +8,25 @@
 import UIKit
 
 class SignUpVC: BaseVC {
-
+    // MARK: - Outlets
     @IBOutlet private weak var firstNameTF: UITextField!
     @IBOutlet private weak var lastNameTF: UITextField!
     @IBOutlet private weak var emailTF: UITextField!
     @IBOutlet private weak var ageTF: UITextField!
     @IBOutlet private weak var passwordTF: UITextField!
     @IBOutlet private weak var confirmationPasswordTF: UITextField!
-
     @IBOutlet private weak var showHideConfirmationPasswordButton: UIButton!
     @IBOutlet private weak var showHidePasswordButton: UIButton!
+    
+    // MARK: - Properties
     weak var viewModel: SignUpViewModelProtocol!
     var isSecurePassword = true
     var isSecureConfirmationPassword = true
     
+    // MARK: - ViewLifeCycle
     init(viewModel: SignUpViewModelProtocol) {
         super.init(baseViewModel: viewModel)
         self.viewModel = viewModel
-        
     }
     
     required init?(coder: NSCoder) {
@@ -35,17 +36,6 @@ class SignUpVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
-        // Do any additional setup after loading the view.
-    }
-
-    func setupBinding() {
-        viewModel.onSuccessSaving = {[weak self] in
-            guard let self = self else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.navigationController?.popViewController(animated: true)
-            }
-            
-        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -80,10 +70,10 @@ class SignUpVC: BaseVC {
             _ = try validateEmail()
             _ = try validateAge()
             _ = try validatePassword()
-
+            
             let password = passwordTF.text ?? ""
             let confirmPass = confirmationPasswordTF.text ?? ""
-
+            
             if password == confirmPass {
                 let firstName = firstNameTF.text ?? ""
                 let lastName = lastNameTF.text ?? ""
@@ -94,11 +84,11 @@ class SignUpVC: BaseVC {
                                  email: email,
                                  age: age,
                                  password: password)
-
+                
             } else {
                 self.showMessage(message: "Confirm Password isn't identical to password", type: .error)
             }
-
+            
         } catch {
             self.showMessage(message: error.localizedDescription, type: .error)
         }
@@ -107,6 +97,16 @@ class SignUpVC: BaseVC {
 }
 
 extension SignUpVC {
+    
+    func setupBinding() {
+        viewModel.onSuccessSaving = {[weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+        }
+    }
     
     func validateFirstUserName() throws -> String {
         let valid = try ValidatorFactory
@@ -139,5 +139,6 @@ extension SignUpVC {
             .validated(value: passwordTF.text ?? "")
         return valid
     }
- 
+    
 }
+

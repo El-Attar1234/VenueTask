@@ -55,56 +55,6 @@ extension MoreVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = MoreDataService.getMoreItems()[indexPath.item].type
         menuDelegate?.itemClicked(type: type ?? .home)
-
-//        switch type {
-//        case .home:
-//            homeItemSelected()
-//        case .myProfile:
-//            myProfileItemSelected()
-//        case .termsAndConditions:
-//           termsItemSelected()
-//        case .logout:
-//            logoutItemSelected()
-//        case .none:
-//            print("none")
-//        }
     }
 }
 
-// MARK: - Navigation
-extension MoreVC {
-    
-    func homeItemSelected() {
-        let viewControllers = self.navigationController?.viewControllers ?? []
-        for vc in viewControllers where vc is HomeVC {
-            self.navigationController?.popToViewController(vc, animated: true)
-            return
-        }
-        let vc = SceneContainer.getHomeVc()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func myProfileItemSelected() {
-        let viewControllers = self.navigationController?.viewControllers ?? []
-        for vc in viewControllers where vc is MyProfileVC {
-            self.navigationController?.popToViewController(vc, animated: true)
-            return
-        }
-        let vc = SceneContainer.getMyProfile()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    func termsItemSelected() {
-        let viewControllers = self.navigationController?.viewControllers ?? []
-        for vc in viewControllers where vc is TermsAndConditionsVC {
-            self.navigationController?.popToViewController(vc, animated: true)
-            return
-        }
-        let vc = SceneContainer.getTermsAndConditions()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    func logoutItemSelected() {
-        PersistenceManager.clearDefalts()
-        let vc = SceneContainer.embedVCInNavController(SceneContainer.getLoginVC())
-        AppManager.shared.setRootView(viewController: vc)
-    }
-}

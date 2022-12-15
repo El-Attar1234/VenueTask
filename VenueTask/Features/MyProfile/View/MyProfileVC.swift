@@ -108,7 +108,7 @@ extension MyProfileVC: SidemenuClassdelegate {
         case .myProfile:
             print("profile is current")
         case .termsAndConditions:
-            print("terms is current")
+            termsItemSelected()
         case .logout:
             AppManager.shared.logout()
         }

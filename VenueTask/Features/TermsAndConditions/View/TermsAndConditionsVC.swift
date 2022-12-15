@@ -107,6 +107,4 @@ extension TermsAndConditionsVC: SidemenuClassdelegate {
         let vc = SceneContainer.getMyProfile()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
-
 }

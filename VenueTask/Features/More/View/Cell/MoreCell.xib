@@ -23,14 +23,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGH-SG-oXC">
-                        <rect key="frame" x="0.0" y="3" width="320" height="31"/>
+                        <rect key="frame" x="0.0" y="3" width="320" height="26"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Ues-2Y-DdA">
-                                <rect key="frame" x="271" y="3.6666666666666679" width="24" height="24"/>
+                                <rect key="frame" x="271" y="1" width="24" height="24"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czD-Js-tKD">
-                                <rect key="frame" x="10.000000000000002" y="10" width="29.666666666666671" height="11"/>
+                                <rect key="frame" x="10.000000000000002" y="10" width="29.666666666666671" height="6"/>
                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="16"/>
                                 <color key="textColor" name="header-black"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                     <constraint firstAttribute="trailing" secondItem="iGH-SG-oXC" secondAttribute="trailing" id="Gnn-58-97u"/>
                     <constraint firstItem="iGH-SG-oXC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="gcC-xj-hV6"/>
                     <constraint firstItem="iGH-SG-oXC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hNW-Pj-feg"/>
-                    <constraint firstAttribute="bottom" secondItem="iGH-SG-oXC" secondAttribute="bottom" constant="10" id="sFg-g6-VBG"/>
+                    <constraint firstAttribute="bottom" secondItem="iGH-SG-oXC" secondAttribute="bottom" constant="15" id="sFg-g6-VBG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

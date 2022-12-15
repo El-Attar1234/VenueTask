@@ -20,17 +20,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aea-Sm-OAO" userLabel="Container View">
-                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <rect key="frame" x="0.0" y="47" width="390" height="797"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="otm-fi-aSa">
-                            <rect key="frame" x="5" y="10" width="380" height="816"/>
+                            <rect key="frame" x="5" y="85.333333333333314" width="380" height="693.66666666666674"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="LCw-ge-leW">
+                            <rect key="frame" x="165" y="10.000000000000004" width="60.333333333333343" height="60.333333333333343"/>
+                        </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="otm-fi-aSa" secondAttribute="trailing" constant="5" id="1tC-dO-HZg"/>
+                        <constraint firstItem="LCw-ge-leW" firstAttribute="top" secondItem="Aea-Sm-OAO" secondAttribute="top" constant="10" id="9J4-6p-VlS"/>
+                        <constraint firstItem="otm-fi-aSa" firstAttribute="top" secondItem="LCw-ge-leW" secondAttribute="bottom" constant="15" id="FF5-rb-168"/>
                         <constraint firstAttribute="bottom" secondItem="otm-fi-aSa" secondAttribute="bottom" constant="18" id="RsD-vT-ugw"/>
-                        <constraint firstItem="otm-fi-aSa" firstAttribute="top" secondItem="Aea-Sm-OAO" secondAttribute="top" constant="10" id="THp-RE-xfk"/>
+                        <constraint firstItem="LCw-ge-leW" firstAttribute="centerX" secondItem="Aea-Sm-OAO" secondAttribute="centerX" id="SRi-Gs-ceX"/>
                         <constraint firstItem="otm-fi-aSa" firstAttribute="leading" secondItem="Aea-Sm-OAO" secondAttribute="leading" constant="5" id="vnA-EL-jJa"/>
                     </constraints>
                 </view>
@@ -40,13 +45,14 @@
             <constraints>
                 <constraint firstItem="Aea-Sm-OAO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="08N-h4-aqy"/>
                 <constraint firstAttribute="bottom" secondItem="Aea-Sm-OAO" secondAttribute="bottom" id="6vB-8l-cgz"/>
-                <constraint firstItem="Aea-Sm-OAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8MS-xD-V9r"/>
+                <constraint firstItem="Aea-Sm-OAO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BUN-YO-LL4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aea-Sm-OAO" secondAttribute="trailing" id="ape-jh-PRG"/>
             </constraints>
-            <point key="canvasLocation" x="28" y="21"/>
+            <point key="canvasLocation" x="27.69230769230769" y="20.616113744075829"/>
         </view>
     </objects>
     <resources>
+        <image name="default_avatar" width="60.333332061767578" height="60.333332061767578"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
