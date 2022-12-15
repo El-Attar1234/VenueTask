@@ -16,7 +16,7 @@ enum ViewType: Int {
 }
 
 class HomeVC: BaseVC {
-    
+    // MARK: - Outlets
     @IBOutlet private weak var tabsCollectionView: UICollectionView! {
         didSet {
             tabsCollectionView.dataSource = self
@@ -30,7 +30,6 @@ class HomeVC: BaseVC {
     // MARK: - Variables
     private let cLocationManager = CLLocationManager()
     weak var viewModel: HomeViewModelProtocol!
-    var tabsTitles = ["ListView", "GoogleMap"]
     private var infoWindow = CustomMapMarkerWindow(frame: .zero)
     
     var viewtype: ViewType = .listView {
@@ -43,6 +42,7 @@ class HomeVC: BaseVC {
             case .googleMaps:
                 venuesTableView.isHiddenIfNeeded = true
                 mapView.isHiddenIfNeeded = false
+                self.addMarkers()
             }
         }
     }
@@ -66,12 +66,10 @@ class HomeVC: BaseVC {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // setUpNavBar()
         self.navigationController?.navigationBar.isHidden = true
         tabsCollectionView.selectItem(at: IndexPath(item: 0, section: 0),
                                       animated: true,
                                       scrollPosition: .centeredVertically)
-        viewModel.viewWillAppear()
         
     }
     
@@ -98,7 +96,7 @@ extension HomeVC {
         viewModel.onSuccessFetching = { [weak self] in
             guard let self else { return }
             self.venuesTableView.reloadData()
-            self.addMarkers()
+           
         }
     }
     private func setUpLocationManager() {
@@ -113,11 +111,8 @@ extension HomeVC {
         case .notDetermined:
             cLocationManager.requestWhenInUseAuthorization()
         case .restricted, .denied:
-            print("denied")
-            //                    self.hideLoadingIndicator()
-            //                   setUpLocationDeniedCase()
+            self.showMessage(message: "Location Not Enabled", type: .error)
         case .authorizedAlways, .authorizedWhenInUse:
-            print("Access") // go to map
             cLocationManager.startUpdatingLocation()
         @unknown default:
             break
@@ -128,19 +123,14 @@ extension HomeVC {
 extension HomeVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //  self.showLoadingIndicator()
-        guard let location: CLLocation = locations.last else {
-            return
-        }
+        guard let location: CLLocation = locations.last else {return}
         
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         let userLocation = UserLocation(latitude: latitude, longitude: longitude)
         PersistenceManager.save(value: userLocation)
-        print("Lat \(latitude)")
-        print("Long \(longitude)")
-        
         cLocationManager.stopUpdatingLocation()
+        viewModel.viewWillAppear()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -155,15 +145,10 @@ extension HomeVC: CLLocationManagerDelegate {
             
             let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 17)
             mapView.camera = camera
-            print(venue?.name)
-            
-            let marker: GMSMarker = GMSMarker() // Allocating Marker
-//            marker.title = venue?.name
-//            marker.snippet = "Sub title" // Setting sub title
+            let marker: GMSMarker = GMSMarker()
             marker.userData = venue
-           // marker.icon = Asset.Images.icNoData.image
-            marker.appearAnimation = .pop // Appearing animation. default
-            marker.position = CLLocationCoordinate2DMake(lat, long) // CLLocationCoordinate2D
+            marker.appearAnimation = .pop
+            marker.position = CLLocationCoordinate2DMake(lat, long)
             DispatchQueue.main.async {[weak self] in
                 // Setting marker on mapview in main thread.
                 marker.map = self?.mapView // Setting marker on Mapview

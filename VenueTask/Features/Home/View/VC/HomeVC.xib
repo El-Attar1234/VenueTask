@@ -54,11 +54,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-4X-oCC" customClass="GMSMapView">
-                    <rect key="frame" x="10" y="103" width="370" height="687"/>
+                    <rect key="frame" x="15" y="108" width="360" height="682"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxo-Pr-Y8o">
-                    <rect key="frame" x="10" y="103" width="370" height="687"/>
+                    <rect key="frame" x="15" y="108" width="360" height="682"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -67,14 +67,14 @@
             <constraints>
                 <constraint firstItem="fwM-i5-0ei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="4cz-j5-Zn1"/>
                 <constraint firstItem="3qp-IC-F2E" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="-1.5" id="69o-Yt-1oZ"/>
-                <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="10" id="AxB-oz-0AV"/>
-                <constraint firstItem="lYw-4X-oCC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="CJk-O0-iX4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yxo-Pr-Y8o" secondAttribute="trailing" constant="10" id="ECh-JT-yjh"/>
+                <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="15" id="AxB-oz-0AV"/>
+                <constraint firstItem="lYw-4X-oCC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="CJk-O0-iX4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yxo-Pr-Y8o" secondAttribute="trailing" constant="15" id="ECh-JT-yjh"/>
                 <constraint firstItem="d8j-B2-Vje" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FXh-a0-evv"/>
                 <constraint firstItem="d8j-B2-Vje" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="J1U-E4-Lh1"/>
-                <constraint firstItem="lYw-4X-oCC" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="10" id="Nme-lb-Qf5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lYw-4X-oCC" secondAttribute="trailing" constant="10" id="Trn-i6-YD0"/>
-                <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Vtj-ls-AiF"/>
+                <constraint firstItem="lYw-4X-oCC" firstAttribute="top" secondItem="d8j-B2-Vje" secondAttribute="bottom" constant="15" id="Nme-lb-Qf5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lYw-4X-oCC" secondAttribute="trailing" constant="15" id="Trn-i6-YD0"/>
+                <constraint firstItem="Yxo-Pr-Y8o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Vtj-ls-AiF"/>
                 <constraint firstAttribute="trailing" secondItem="3qp-IC-F2E" secondAttribute="trailing" id="Wj3-Fo-X6s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lYw-4X-oCC" secondAttribute="bottom" constant="20" id="ZSi-aL-K3E"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yxo-Pr-Y8o" secondAttribute="bottom" constant="20" id="oSG-5H-dbG"/>

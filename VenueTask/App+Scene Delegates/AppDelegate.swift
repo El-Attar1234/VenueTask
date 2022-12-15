@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         setupKeyboard()
         setUpGoogleMaps()
+        PersistenceManager.authenticated(value: true)
         return true
     }
 

@@ -9,7 +9,7 @@ import Foundation
 
 class PersistenceManager {
     
-    enum DefaulKeys: String, CaseIterable{
+    enum DefaulKeys: String{
         case location = "location"
         case email = "email"
         case authentication = "Authentication"
@@ -48,6 +48,6 @@ class PersistenceManager {
         return  UserDefaults.standard.bool(forKey: DefaulKeys.authentication.rawValue)
     }
     static func clearDefalts() {
-        DefaulKeys.allCases.forEach { UserDefaults.standard.removeObject(forKey: $0.rawValue) }
+        UserDefaults.standard.removeObject(forKey:  DefaulKeys.authentication.rawValue)
     }
 }

@@ -67,7 +67,7 @@ extension MoreVC: UITableViewDelegate {
 // MARK: - Navigation
 extension MoreVC {
     
-    func homeItemSelected(){
+    func homeItemSelected() {
         let viewControllers = self.navigationController?.viewControllers ?? []
         for vc in viewControllers where vc is HomeVC {
             self.navigationController?.popToViewController(vc, animated: true)
@@ -77,7 +77,7 @@ extension MoreVC {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func myProfileItemSelected(){
+    func myProfileItemSelected() {
         let viewControllers = self.navigationController?.viewControllers ?? []
         for vc in viewControllers where vc is MyProfileVC {
             self.navigationController?.popToViewController(vc, animated: true)

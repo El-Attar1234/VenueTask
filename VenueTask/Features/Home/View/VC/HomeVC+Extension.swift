@@ -33,13 +33,14 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  2
+        return  viewModel.getTabsT().count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: TabCell.self, for: indexPath)
-        cell.configure(title: tabsTitles[indexPath.item])
+        let title = viewModel.getTabsT()[indexPath.item]
+        cell.configure(title: title)
         return cell
         
     }

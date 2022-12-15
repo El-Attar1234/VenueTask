@@ -12,6 +12,7 @@ protocol HomeViewModelProtocol: AnyObject, BaseViewModelProtocol {
     // MARK: - Observables
     var onSuccessFetching: (() -> Void)? { get set }
     func getVenuesCount() -> Int
+    func getTabsT() -> [String]
     func getVenue(item: Int) -> Venue?
     
 }
@@ -22,6 +23,7 @@ class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
     // MARK: - Properties
     private  var homeRepo: HomeRepositoryProtocol!
     var venues: [Venue] = []
+    var tabsTitles = ["ListView", "GoogleMap"]
     
     init(homeRepo: HomeRepositoryProtocol = HomeRepository()) {
         self.homeRepo = homeRepo
@@ -37,6 +39,9 @@ class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
     
     func getVenue(item: Int) -> Venue? {
         venues[item]
+    }
+    func getTabsT() -> [String] {
+        tabsTitles
     }
 }
 extension HomeViewModel {
