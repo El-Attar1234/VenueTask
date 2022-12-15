@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SidemenuClassdelegate: AnyObject {
+    func itemClicked(type: MoreTypes) 
+}
+
 class MoreVC: UIViewController {
     @IBOutlet private weak var moreTableView: UITableView!
     
+    weak var menuDelegate: SidemenuClassdelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScreenDesign()
@@ -48,19 +54,20 @@ extension MoreVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = MoreDataService.getMoreItems()[indexPath.item].type
+        menuDelegate?.itemClicked(type: type ?? .home)
 
-        switch type {
-        case .home:
-            homeItemSelected()
-        case .myProfile:
-            myProfileItemSelected()
-        case .termsAndConditions:
-           termsItemSelected()
-        case .logout:
-            logoutItemSelected()
-        case .none:
-            print("none")
-        }
+//        switch type {
+//        case .home:
+//            homeItemSelected()
+//        case .myProfile:
+//            myProfileItemSelected()
+//        case .termsAndConditions:
+//           termsItemSelected()
+//        case .logout:
+//            logoutItemSelected()
+//        case .none:
+//            print("none")
+//        }
     }
 }
 

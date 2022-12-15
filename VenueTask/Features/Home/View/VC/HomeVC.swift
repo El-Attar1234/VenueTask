@@ -31,6 +31,7 @@ class HomeVC: BaseVC {
     private let cLocationManager = CLLocationManager()
     weak var viewModel: HomeViewModelProtocol!
     private var infoWindow = CustomMapMarkerWindow(frame: .zero)
+    var menu: SideMenuNavigationController?
     
     var viewtype: ViewType = .listView {
         didSet {
@@ -67,16 +68,17 @@ class HomeVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        tabsCollectionView.selectItem(at: IndexPath(item: 0, section: 0),
-                                      animated: true,
-                                      scrollPosition: .centeredVertically)
-        
+       
+    //    viewtype = .listView
     }
     
     @IBAction func openSideMenu(_ sender: Any) {
-        let menu = SceneContainer.openSideMenu()
-        menu.sideMenuDelegate = self
-        self.present(menu, animated: true)
+         menu = SceneContainer.openSideMenu(menuDelegate: self)
+        menu?.sideMenuDelegate = self
+        if let menu {
+            self.present(menu, animated: true)
+        }
+       
     }
     
 }
@@ -85,6 +87,9 @@ extension HomeVC {
     private func setupInitialUI() {
         venuesTableView.isHiddenIfNeeded = false
         mapView.isHiddenIfNeeded = true
+        tabsCollectionView.selectItem(at: IndexPath(item: 0, section: 0),
+                                      animated: true,
+                                      scrollPosition: .centeredVertically)
         setUpTableView()
     }
     private func setUpTableView() {
@@ -200,4 +205,41 @@ extension HomeVC: SideMenuNavigationControllerDelegate {
         })
     }
  
+}
+
+extension HomeVC: SidemenuClassdelegate {
+    func itemClicked(type: MoreTypes) {
+        menu?.dismiss(animated: true)
+        menu = nil
+        switch type {
+        case .home:
+          print("home is current")
+        case .myProfile:
+            myProfileItemSelected()
+        case .termsAndConditions:
+           termsItemSelected()
+        case .logout:
+            AppManager.shared.logout()
+        }
+        
+    }
+    func myProfileItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is MyProfileVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getMyProfile()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func termsItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is TermsAndConditionsVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getTermsAndConditions()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+  
 }

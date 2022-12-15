@@ -11,6 +11,7 @@ import SideMenu
 class TermsAndConditionsVC: UIViewController {
     
     private var overlayView = UIView()
+    var menu: SideMenuNavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +42,11 @@ class TermsAndConditionsVC: UIViewController {
     }
     @objc
     func mainMenuTapped() {
-        let menu = SceneContainer.openSideMenu()
-        menu.sideMenuDelegate = self
-        self.present(menu, animated: true)
+         menu = SceneContainer.openSideMenu(menuDelegate: self)
+        menu?.sideMenuDelegate = self
+        if let menu {
+            self.present(menu, animated: true)
+        }
     }
 }
 
@@ -67,4 +70,43 @@ extension TermsAndConditionsVC: SideMenuNavigationControllerDelegate {
         })
     }
     
+}
+
+extension TermsAndConditionsVC: SidemenuClassdelegate {
+    func itemClicked(type: MoreTypes) {
+        menu?.dismiss(animated: true)
+        menu = nil
+        switch type {
+        case .home:
+            homeItemSelected()
+        case .myProfile:
+            myProfileItemSelected()
+        case .termsAndConditions:
+            print("terms is current")
+        case .logout:
+            AppManager.shared.logout()
+        }
+        
+    }
+    func homeItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is HomeVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getHomeVc()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func myProfileItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is MyProfileVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getMyProfile()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+
 }

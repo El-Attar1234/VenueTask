@@ -26,18 +26,13 @@ final class SceneContainer {
         return vc
     }
     
-    class func openSideMenu() -> SideMenuNavigationController {
+    class func openSideMenu(menuDelegate: SidemenuClassdelegate?) -> SideMenuNavigationController {
         let viewController = getMoreVc()
+        viewController.menuDelegate = menuDelegate
         let menu = SideMenuNavigationController(rootViewController: viewController)
         menu.leftSide = true
-        // menu.sideMenuDelegate = self
-       // let width = UIScreen.main.bounds.width - 70
-     //   menu.menuWidth = (width - 70)
-        
         menu.dismissOnPresent = true
         menu.dismissOnPush = true
-       // menu.presentationStyle = .menuSlideIn
-        
         let presentationStyle: SideMenuPresentationStyle = .viewSlideOut
         presentationStyle.menuScaleFactor = 0.5
         presentationStyle.presentingScaleFactor = 0.8

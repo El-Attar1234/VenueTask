@@ -12,6 +12,7 @@ class MyProfileVC: BaseVC {
     @IBOutlet private weak var profileStackView: UIStackView!
     let profileItems = MyOwnProfileItems.allItems
     weak var viewModel: MyProfileViewModelProtocol!
+    var menu: SideMenuNavigationController?
     
     init(viewModel: MyProfileViewModelProtocol) {
         super.init(baseViewModel: viewModel)
@@ -68,9 +69,11 @@ class MyProfileVC: BaseVC {
     }
     @objc
     func mainMenuTapped() {
-        let menu = SceneContainer.openSideMenu()
-        menu.sideMenuDelegate = self
-        self.present(menu, animated: true)
+         menu = SceneContainer.openSideMenu(menuDelegate: self)
+        menu?.sideMenuDelegate = self
+        if let menu {
+            self.present(menu, animated: true)
+        }
     }
 }
 
@@ -94,4 +97,40 @@ extension MyProfileVC: SideMenuNavigationControllerDelegate {
         })
     }
  
+}
+extension MyProfileVC: SidemenuClassdelegate {
+    func itemClicked(type: MoreTypes) {
+        menu?.dismiss(animated: true)
+        menu = nil
+        switch type {
+        case .home:
+            homeItemSelected()
+        case .myProfile:
+            print("profile is current")
+        case .termsAndConditions:
+            print("terms is current")
+        case .logout:
+            AppManager.shared.logout()
+        }
+    }
+    func homeItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is HomeVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getHomeVc()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func termsItemSelected() {
+        let viewControllers = self.navigationController?.viewControllers ?? []
+        for vc in viewControllers where vc is TermsAndConditionsVC {
+            self.navigationController?.popToViewController(vc, animated: true)
+            return
+        }
+        let vc = SceneContainer.getTermsAndConditions()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 }

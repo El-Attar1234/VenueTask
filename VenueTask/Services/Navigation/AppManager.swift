@@ -26,4 +26,9 @@ final class AppManager {
         window?.rootViewController = viewController
         
     }
+    func logout() {
+        PersistenceManager.clearDefalts()
+        let vc = SceneContainer.embedVCInNavController(SceneContainer.getLoginVC())
+        setRootView(viewController: vc)
+    }
 }
