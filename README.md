@@ -6,7 +6,6 @@
 
 - [Moya](https://github.com/Moya/Moya)
 - [GoogleMaps](https://cocoapods.org/pods/GoogleMaps)
-- [GoogleMaps](https://cocoapods.org/pods/GoogleMaps)
 - [SideMenu](https://github.com/jonkykong/SideMenu)
 - [CoreData](https://developer.apple.com/documentation/coredata)
 - [SwiftLint](https://github.com/realm/SwiftLint)
