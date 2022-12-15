@@ -22,6 +22,8 @@
                 <outlet property="firstNameTF" destination="fpy-mC-Wpz" id="zCd-km-x2z"/>
                 <outlet property="lastNameTF" destination="plQ-8X-R4R" id="hr4-v6-g6M"/>
                 <outlet property="passwordTF" destination="TvT-Ji-fm2" id="HF2-oK-tbh"/>
+                <outlet property="showHideConfirmationPasswordButton" destination="BAu-k9-ZeF" id="DRb-JL-Oqo"/>
+                <outlet property="showHidePasswordButton" destination="Qpi-U6-Zu8" id="eQ0-pD-6UF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -304,6 +306,26 @@
                                     <color key="textColor" systemColor="systemRedColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpi-U6-Zu8" userLabel="show hide password">
+                                    <rect key="frame" x="315" y="436" width="35" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="gqz-yr-QoV"/>
+                                    </constraints>
+                                    <state key="normal" image="show"/>
+                                    <connections>
+                                        <action selector="showhidepasswordButtonTapped:" destination="-1" eventType="touchUpInside" id="vGy-G7-kv8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAu-k9-ZeF" userLabel="show hide Confirmation password">
+                                    <rect key="frame" x="315" y="533.66666666666663" width="35" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="hd7-69-mQc"/>
+                                    </constraints>
+                                    <state key="normal" image="show"/>
+                                    <connections>
+                                        <action selector="showhideConfirmationPasswordButtonTapped:" destination="-1" eventType="touchUpInside" id="hLJ-fX-bLR"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2r-53-j9f" customClass="MainCustomButton" customModule="VenueTask" customModuleProvider="target">
                                     <rect key="frame" x="32" y="666" width="326" height="52"/>
                                     <constraints>
@@ -318,6 +340,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="j4u-3p-3kh" secondAttribute="trailing" constant="30" id="06F-s3-oMi"/>
+                                <constraint firstItem="Qpi-U6-Zu8" firstAttribute="centerY" secondItem="TvT-Ji-fm2" secondAttribute="centerY" id="1ER-5s-Oa8"/>
                                 <constraint firstItem="iHN-T1-LKJ" firstAttribute="leading" secondItem="sva-4f-d0m" secondAttribute="leading" constant="70" id="1YS-ov-EHg"/>
                                 <constraint firstAttribute="bottom" secondItem="P2r-53-j9f" secondAttribute="bottom" constant="15" id="G2w-2A-tfA"/>
                                 <constraint firstItem="P2r-53-j9f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="j4u-3p-3kh" secondAttribute="bottom" constant="20" id="LdU-Lr-adE"/>
@@ -325,11 +348,14 @@
                                 <constraint firstItem="iHN-T1-LKJ" firstAttribute="bottom" secondItem="UAv-Uf-1ZB" secondAttribute="bottom" id="MDJ-Ox-ZCI"/>
                                 <constraint firstItem="wtd-Qd-coA" firstAttribute="bottom" secondItem="PL6-sq-djo" secondAttribute="bottom" id="SCA-5Q-elC"/>
                                 <constraint firstAttribute="trailing" secondItem="P2r-53-j9f" secondAttribute="trailing" constant="32" id="WNc-Do-ZU1"/>
+                                <constraint firstItem="BAu-k9-ZeF" firstAttribute="centerY" secondItem="noW-eu-vxa" secondAttribute="centerY" id="WQ1-eR-Cyk"/>
                                 <constraint firstItem="rlC-Sq-vx5" firstAttribute="top" secondItem="xLX-DT-d2b" secondAttribute="top" id="a7g-O1-zV3"/>
                                 <constraint firstItem="iHN-T1-LKJ" firstAttribute="top" secondItem="UAv-Uf-1ZB" secondAttribute="top" constant="5" id="a89-gz-BCu"/>
                                 <constraint firstItem="kfq-E6-bzk" firstAttribute="leading" secondItem="sva-4f-d0m" secondAttribute="leading" constant="100" id="aII-0y-6nA"/>
                                 <constraint firstItem="rlC-Sq-vx5" firstAttribute="leading" secondItem="sva-4f-d0m" secondAttribute="leading" constant="65" id="djH-Tc-ni0"/>
+                                <constraint firstItem="Qpi-U6-Zu8" firstAttribute="trailing" secondItem="ezt-G6-iDD" secondAttribute="trailing" constant="-10" id="f04-iP-BoC"/>
                                 <constraint firstItem="kfq-E6-bzk" firstAttribute="top" secondItem="Y5d-d5-pS8" secondAttribute="top" id="fA1-RK-ALG"/>
+                                <constraint firstItem="BAu-k9-ZeF" firstAttribute="trailing" secondItem="mRQ-OQ-jB9" secondAttribute="trailing" constant="-10" id="huQ-hC-Wea"/>
                                 <constraint firstItem="rlC-Sq-vx5" firstAttribute="bottom" secondItem="xLX-DT-d2b" secondAttribute="bottom" id="jSw-SB-4vY"/>
                                 <constraint firstItem="kfq-E6-bzk" firstAttribute="bottom" secondItem="Y5d-d5-pS8" secondAttribute="bottom" id="pvw-nf-15U"/>
                                 <constraint firstItem="wtd-Qd-coA" firstAttribute="leading" secondItem="sva-4f-d0m" secondAttribute="leading" constant="100" id="uwQ-ud-js5"/>
@@ -366,6 +392,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="show" width="25" height="24"/>
         <namedColor name="ghost-white">
             <color red="0.97299998998641968" green="0.98000001907348633" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

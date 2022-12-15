@@ -16,7 +16,11 @@ class SignUpVC: BaseVC {
     @IBOutlet private weak var passwordTF: UITextField!
     @IBOutlet private weak var confirmationPasswordTF: UITextField!
 
+    @IBOutlet private weak var showHideConfirmationPasswordButton: UIButton!
+    @IBOutlet private weak var showHidePasswordButton: UIButton!
     weak var viewModel: SignUpViewModelProtocol!
+    var isSecurePassword = true
+    var isSecureConfirmationPassword = true
     
     init(viewModel: SignUpViewModelProtocol) {
         super.init(baseViewModel: viewModel)
@@ -46,6 +50,26 @@ class SignUpVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    @IBAction func showhidepasswordButtonTapped(_ sender: Any) {
+        isSecurePassword.toggle()
+        if isSecurePassword {
+            showHidePasswordButton.setImage(Asset.Images.show.image, for: .normal)
+        } else {
+            showHidePasswordButton.setImage(Asset.Images.hide.image, for: .normal)
+        }
+        passwordTF.isSecureTextEntry = isSecurePassword
+    }
+    
+    @IBAction func showhideConfirmationPasswordButtonTapped(_ sender: Any) {
+        isSecureConfirmationPassword.toggle()
+        if isSecureConfirmationPassword {
+            showHideConfirmationPasswordButton.setImage(Asset.Images.show.image, for: .normal)
+        } else {
+            showHideConfirmationPasswordButton.setImage(Asset.Images.hide.image, for: .normal)
+        }
+        confirmationPasswordTF.isSecureTextEntry = isSecureConfirmationPassword
     }
     
     @IBAction func signupButtonTapped(_ sender: Any) {

@@ -10,9 +10,11 @@ import UIKit
 class LoginVC: BaseVC {
 
     @IBOutlet private weak var passwordTF: UITextField!
+    @IBOutlet weak var showPasswordButton: UIButton!
     @IBOutlet private weak var emailTF: UITextField!
     
     weak var viewModel: LoginViewModelProtocol!
+    var isSecurePassword = true
     
     init(viewModel: LoginViewModelProtocol) {
         super.init(baseViewModel: viewModel)
@@ -27,12 +29,21 @@ class LoginVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
-        
-        // Do any additional setup after loading the view.
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    @IBAction func showHidePassword(_ sender: Any) {
+        isSecurePassword.toggle()
+        if isSecurePassword {
+            showPasswordButton.setImage(Asset.Images.show.image, for: .normal)
+        } else {
+            showPasswordButton.setImage(Asset.Images.hide.image, for: .normal)
+        }
+        passwordTF.isSecureTextEntry = isSecurePassword
     }
     
     @IBAction func loginActionTapped(_ sender: Any) {
